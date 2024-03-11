@@ -1,0 +1,62 @@
+@startuml
+set separator none
+title System Landscape
+
+top to bottom direction
+
+!include <C4/C4>
+!include <C4/C4_Context>
+
+AddElementTag("Software System", $bgColor="#1168bd", $borderColor="#0b4884", $fontColor="#ffffff", $sprite="", $shadowing="", $borderStyle="Solid", $borderThickness="1")
+AddElementTag("Element", $bgColor="#dddddd", $borderColor="#9a9a9a", $fontColor="#000000", $sprite="", $shadowing="", $borderStyle="Solid", $borderThickness="1")
+AddElementTag("Software System,Hycon", $bgColor="#ffd470", $borderColor="#b2944e", $fontColor="#4a4a4a", $sprite="", $shadowing="", $borderStyle="Solid", $borderThickness="1")
+
+AddRelTag("Relationship", $textColor="#707070", $lineColor="#707070", $lineStyle = "")
+
+AddBoundaryTag("Distributed Datasets", $borderColor="#cccccc", $fontColor="#cccccc", $borderStyle="Dashed", $borderThickness="1")
+Boundary(group_1, "Distributed Datasets", $tags="Distributed Datasets") {
+  Person(ERP, "ERP", $descr="Traditional type of dataset in enterprise grade.", $tags="Element", $link="")
+  Person(DataLake, "Data Lake", $descr="Unstructured or semi-structured dataset", $tags="Element", $link="")
+  Person(DataWarehouse, "Data Warehouse", $descr="Structured dataset.", $tags="Element", $link="")
+  Person(Vehicles, "Vehicles", $descr="Publish and subscribe data in near real time", $tags="Element", $link="")
+  Person(TrafficControlInformation, "Traffic Control Information", $descr="Publish traffic information", $tags="Element", $link="")
+    AddBoundaryTag("Distributed Datasets/3rd Party Data Platform", $borderColor="#cccccc", $fontColor="#cccccc", $borderStyle="Dashed", $borderThickness="1")
+    Boundary(group_2, "3rd Party Data Platform", $tags="Distributed Datasets/3rd Party Data Platform") {
+      WithoutPropertyHeader()
+      AddProperty("Owner","Hyconsoft")
+      System(HyconDataPlatform, "Hycon Data Platform", $descr="An autonomous driving dataset generated from scenarios provided by the consortium.", $tags="Software System,Hycon", $link="")
+    }
+
+}
+
+AddBoundaryTag("Edge Solution", $borderColor="#cccccc", $fontColor="#cccccc", $borderStyle="Dashed", $borderThickness="1")
+Boundary(group_3, "Edge Solution", $tags="Edge Solution") {
+  WithoutPropertyHeader()
+  AddProperty("Owner","Intellectus")
+  System(Int2EdgeComputingPlatform, "Int2 Edge Computing Platform", $descr="Int2 Edge Computing Platform", $tags="Software System", $link="")
+}
+
+AddBoundaryTag("Int2 Data Fabric", $borderColor="#cccccc", $fontColor="#cccccc", $borderStyle="Dashed", $borderThickness="1")
+Boundary(group_4, "Int2 Data Fabric", $tags="Int2 Data Fabric") {
+  WithoutPropertyHeader()
+  AddProperty("Owner","Intellectus")
+  System(Int2DataFabricPlatform, "Int2 Data Fabric Platform", $descr="Autonomous Bigdata Platform has been powerd by Intellectu's Data Fabric Platform which contains the data virtualizations to manage data and the semantic search to discover and the data pipelines to make automated workflows.", $tags="Software System", $link="")
+}
+
+AddBoundaryTag("Stakeholders", $borderColor="#cccccc", $fontColor="#cccccc", $borderStyle="Dashed", $borderThickness="1")
+Boundary(group_5, "Stakeholders", $tags="Stakeholders") {
+  Person(DataConsumer, "Data Consumer", $descr="A consumer who are needed a data in various context.", $tags="Element", $link="")
+}
+
+
+Rel(TrafficControlInformation, Int2DataFabricPlatform, "publish traffic information", $techn="", $tags="Relationship", $link="")
+Rel(Int2EdgeComputingPlatform, Int2DataFabricPlatform, "", $techn="", $tags="Relationship", $link="")
+Rel(Int2DataFabricPlatform, HyconDataPlatform, "", $techn="", $tags="Relationship", $link="")
+Rel(DataConsumer, Int2DataFabricPlatform, "", $techn="", $tags="Relationship", $link="")
+Rel(Int2DataFabricPlatform, ERP, "", $techn="", $tags="Relationship", $link="")
+Rel(Int2DataFabricPlatform, DataLake, "", $techn="", $tags="Relationship", $link="")
+Rel(Int2DataFabricPlatform, DataWarehouse, "", $techn="", $tags="Relationship", $link="")
+Rel(Vehicles, Int2DataFabricPlatform, "subscribe in-time traffic information", $techn="", $tags="Relationship", $link="")
+
+SHOW_LEGEND(true)
+@enduml

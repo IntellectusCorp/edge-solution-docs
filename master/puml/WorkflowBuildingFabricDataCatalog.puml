@@ -1,0 +1,32 @@
+@startuml
+set separator none
+title Metadata App - Dynamic
+
+left to right direction
+
+!include <C4/C4>
+!include <C4/C4_Context>
+!include <C4/C4_Container>
+!include <C4/C4_Component>
+
+AddElementTag("Element", $bgColor="#dddddd", $borderColor="#9a9a9a", $fontColor="#000000", $sprite="", $shadowing="", $borderStyle="Solid", $borderThickness="1")
+AddElementTag("Container", $bgColor="#438dd5", $borderColor="#2e6295", $fontColor="#ffffff", $sprite="", $shadowing="", $borderStyle="Solid", $borderThickness="1")
+
+AddRelTag("Relationship", $textColor="#707070", $lineColor="#707070", $lineStyle = "")
+
+AddBoundaryTag("Container", $bgColor="#ffffff", $borderColor="#2e6295", $fontColor="#2e6295", $shadowing="", $borderStyle="Solid", $borderThickness="1")
+
+Container_Boundary("Int2DataFabricPlatform.MetadataApp_boundary", "Metadata App", $tags="Container") {
+  Component(Int2DataFabricPlatform.MetadataApp.MetaGin, "Meta Gin", $techn="Component: Spring bean", $descr="Metadata Analyzer", $tags="Element", $link="")
+  Component(Int2DataFabricPlatform.MetadataApp.DataCatalogBuilder, "Data Catalog Builder", $techn="", $descr="Component: Spring bean", $tags="Element", $link="")
+  Component(Int2DataFabricPlatform.MetadataApp.FabricDataCatalog, "Fabric Data Catalog", $techn="", $descr="Component: Spring bean", $tags="Element", $link="")
+}
+
+Container(Int2DataFabricPlatform.DataSourceGateway, "Data Source Gateway", $techn="Container: Java Application", $descr="Manage data pipeline between distburited data source and Data Fabric in secure.", $tags="Container", $link="")
+
+Rel(Int2DataFabricPlatform.DataSourceGateway, Int2DataFabricPlatform.MetadataApp.MetaGin, "1. ", $techn="", $tags="Relationship", $link="")
+Rel(Int2DataFabricPlatform.MetadataApp.MetaGin, Int2DataFabricPlatform.MetadataApp.DataCatalogBuilder, "2. analyze", $techn="", $tags="Relationship", $link="")
+Rel(Int2DataFabricPlatform.MetadataApp.DataCatalogBuilder, Int2DataFabricPlatform.MetadataApp.FabricDataCatalog, "3. convert", $techn="", $tags="Relationship", $link="")
+
+SHOW_LEGEND(true)
+@enduml

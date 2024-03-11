@@ -1,0 +1,36 @@
+@startuml
+set separator none
+title Deployment - DataPipeline
+
+top to bottom direction
+
+!include <C4/C4>
+!include <C4/C4_Context>
+!include <C4/C4_Container>
+!include <C4/C4_Deployment>
+
+AddElementTag("Element", $bgColor="#ffffff", $borderColor="#888888", $fontColor="#000000", $sprite="", $shadowing="", $borderStyle="Solid", $borderThickness="1")
+AddElementTag("Container,Database", $bgColor="#438dd5", $borderColor="#2e6295", $fontColor="#ffffff", $sprite="", $shadowing="", $borderStyle="Solid", $borderThickness="1")
+AddElementTag("Container", $bgColor="#438dd5", $borderColor="#2e6295", $fontColor="#ffffff", $sprite="", $shadowing="", $borderStyle="Solid", $borderThickness="1")
+
+AddRelTag("Relationship", $textColor="#707070", $lineColor="#707070", $lineStyle = "")
+
+Deployment_Node(DataPipeline.RealWorld, "Real World", $type="", $descr="", $tags="Element", $link="") {
+  Deployment_Node(DataPipeline.RealWorld.vehicles, "vehicles", $type="", $descr="", $tags="Element", $link="")
+  Deployment_Node(DataPipeline.RealWorld.trafficControl, "trafficControl", $type="", $descr="", $tags="Element", $link="")
+}
+
+Deployment_Node(DataPipeline.Router, "Router (x3)", $type="", $descr="", $tags="Element", $link="") {
+  Container(DataPipeline.Router.StreamPipelineRouter_1, "Stream Pipeline Router", $techn="Container: Zenoh Router", $descr="Router", $tags="Container", $link="")
+}
+
+Deployment_Node(DataPipeline.DataPipelineBackend, "Data Pipeline Backend", $type="", $descr="", $tags="Element", $link="") {
+  Container(DataPipeline.DataPipelineBackend.StreamPipelineBackend_1, "Stream Pipeline Backend", $techn="Container: Zenoh Backend S3", $descr="Subscribe data to store", $tags="Container", $link="")
+  ContainerDb(DataPipeline.DataPipelineBackend.StreamPipelineStorage_1, "Stream Pipeline Storage", $techn="AWS S3", $descr="Raw data storage", $tags="Container,Database", $link="")
+}
+
+Rel(DataPipeline.DataPipelineBackend.StreamPipelineBackend_1, DataPipeline.Router.StreamPipelineRouter_1, "subscribe data to store", $techn="", $tags="Relationship", $link="")
+Rel(DataPipeline.DataPipelineBackend.StreamPipelineBackend_1, DataPipeline.DataPipelineBackend.StreamPipelineStorage_1, "", $techn="", $tags="Relationship", $link="")
+
+SHOW_LEGEND(true)
+@enduml

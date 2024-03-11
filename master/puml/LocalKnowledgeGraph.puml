@@ -1,0 +1,38 @@
+@startuml
+set separator none
+title Knowledge Graph App - Dynamic
+
+top to bottom direction
+
+!include <C4/C4>
+!include <C4/C4_Context>
+!include <C4/C4_Container>
+!include <C4/C4_Component>
+
+AddElementTag("Element", $bgColor="#dddddd", $borderColor="#9a9a9a", $fontColor="#000000", $sprite="", $shadowing="", $borderStyle="Solid", $borderThickness="1")
+AddElementTag("Container,Database", $bgColor="#438dd5", $borderColor="#2e6295", $fontColor="#ffffff", $sprite="", $shadowing="", $borderStyle="Solid", $borderThickness="1")
+AddElementTag("Container", $bgColor="#438dd5", $borderColor="#2e6295", $fontColor="#ffffff", $sprite="", $shadowing="", $borderStyle="Solid", $borderThickness="1")
+
+AddRelTag("Relationship", $textColor="#707070", $lineColor="#707070", $lineStyle = "")
+
+AddBoundaryTag("Container", $bgColor="#ffffff", $borderColor="#2e6295", $fontColor="#2e6295", $shadowing="", $borderStyle="Solid", $borderThickness="1")
+
+Container_Boundary("Int2DataFabricPlatform.KnowledgeGraphApp_boundary", "Knowledge Graph App", $tags="Container") {
+  Component(Int2DataFabricPlatform.KnowledgeGraphApp.KnowledgeWeaver, "Knowledge Weaver", $techn="", $descr="Knowledge Weaver", $tags="Element", $link="")
+  Component(Int2DataFabricPlatform.KnowledgeGraphApp.KnowledgeSlipboxApiProvider, "Knowledge Slipbox Api Provider", $techn="", $descr="Knowledge Graph", $tags="Element", $link="")
+}
+
+Container_Boundary("Int2DataFabricPlatform.MetadataApp_boundary", "Metadata App", $tags="Container") {
+  Component(Int2DataFabricPlatform.MetadataApp.MetaGin, "Meta Gin", $techn="Component: Spring bean", $descr="Metadata Analyzer", $tags="Element", $link="")
+}
+
+ContainerDb(Int2DataFabricPlatform.KnowledgeGraphDatabase, "Knowledge Graph Database", $techn="", $descr="DB: Neo4j or AWS Neptune", $tags="Container,Database", $link="")
+Container(Int2DataFabricPlatform.DataSourceGateway, "Data Source Gateway", $techn="Container: Java Application", $descr="Manage data pipeline between distburited data source and Data Fabric in secure.", $tags="Container", $link="")
+
+Rel(Int2DataFabricPlatform.MetadataApp.MetaGin, Int2DataFabricPlatform.DataSourceGateway, "1. access data source via Broker", $techn="", $tags="Relationship", $link="")
+Rel(Int2DataFabricPlatform.KnowledgeGraphApp.KnowledgeWeaver, Int2DataFabricPlatform.MetadataApp.MetaGin, "2. weave Knowledge from Metadata", $techn="", $tags="Relationship", $link="")
+Rel(Int2DataFabricPlatform.KnowledgeGraphApp.KnowledgeWeaver, Int2DataFabricPlatform.KnowledgeGraphDatabase, "3. build Local Knowledge Graph", $techn="", $tags="Relationship", $link="")
+Rel(Int2DataFabricPlatform.KnowledgeGraphApp.KnowledgeSlipboxApiProvider, Int2DataFabricPlatform.KnowledgeGraphDatabase, "4. fetch", $techn="", $tags="Relationship", $link="")
+
+SHOW_LEGEND(true)
+@enduml
