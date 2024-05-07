@@ -27,9 +27,9 @@ Container_Boundary("Int2DataFabricPlatform.MetadataApp_boundary", "Metadata App"
   Component(Int2DataFabricPlatform.MetadataApp.FabricDataCatalog, "Fabric Data Catalog", $techn="", $descr="Component: Spring bean", $tags="Element", $link="")
 }
 
-ContainerDb(Int2DataFabricPlatform.KnowledgeGraphDatabase, "Knowledge Graph Database", $techn="", $descr="DB: Neo4j or AWS Neptune", $tags="Container,Database", $link="")
 Container(Int2DataFabricPlatform.WebApplication, "Web Application", $techn="", $descr="Serverless nextjs", $tags="Container,Web Browser", $link="")
 Container(Int2DataFabricPlatform.APIService, "API Service", $techn="", $descr="API Gateway Managed Service", $tags="Container", $link="")
+ContainerDb(Int2DataFabricPlatform.KnowledgeGraphDatabase, "Knowledge Graph Database", $techn="", $descr="DB: Neo4j or AWS Neptune", $tags="Container,Database", $link="")
 
 Rel(Int2DataFabricPlatform.MetadataApp.MetaGin, Int2DataFabricPlatform.MetadataApp.FabricDataCatalog, "1. fetch", $techn="", $tags="Relationship", $link="")
 Rel(Int2DataFabricPlatform.KnowledgeGraphApp.KnowledgeSlipboxApiProvider, Int2DataFabricPlatform.KnowledgeGraphDatabase, "2. fetch", $techn="", $tags="Relationship", $link="")

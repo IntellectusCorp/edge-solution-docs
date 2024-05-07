@@ -10,8 +10,8 @@ top to bottom direction
 !include <C4/C4_Deployment>
 
 AddElementTag("Element", $bgColor="#ffffff", $borderColor="#888888", $fontColor="#000000", $sprite="", $shadowing="", $borderStyle="Solid", $borderThickness="1")
-AddElementTag("Container,Hycon", $bgColor="#ffd470", $borderColor="#b2944e", $fontColor="#4a4a4a", $sprite="", $shadowing="", $borderStyle="Solid", $borderThickness="1")
 AddElementTag("Container,Database,Hycon", $bgColor="#ffd470", $borderColor="#b2944e", $fontColor="#4a4a4a", $sprite="", $shadowing="", $borderStyle="Solid", $borderThickness="1")
+AddElementTag("Container,Hycon", $bgColor="#ffd470", $borderColor="#b2944e", $fontColor="#4a4a4a", $sprite="", $shadowing="", $borderStyle="Solid", $borderThickness="1")
 AddElementTag("Container,Database", $bgColor="#438dd5", $borderColor="#2e6295", $fontColor="#ffffff", $sprite="", $shadowing="", $borderStyle="Solid", $borderThickness="1")
 AddElementTag("Container", $bgColor="#438dd5", $borderColor="#2e6295", $fontColor="#ffffff", $sprite="", $shadowing="", $borderStyle="Solid", $borderThickness="1")
 
@@ -50,10 +50,10 @@ Rel(Integration.IntellectusDataFabric.APIGatewayService.APIService_1, Integratio
 Rel(Integration.IntellectusDataFabric.APIGatewayService.APIService_1, Integration.IntellectusDataFabric.MetadataService.MetadataApp_1, "", $techn="", $tags="Relationship", $link="")
 Rel(Integration.HyconDataPipeline.MetadataExtraction_1, Integration.HyconDataPipeline.AutonomousDataStore_1, "Extract metadata(by file)", $techn="", $tags="Relationship", $link="")
 Rel(Integration.HyconDataPipeline.MetadataExtraction_1, Integration.HyconDataPipeline.Anontmization_1, "Anonymization", $techn="", $tags="Relationship", $link="")
-Rel(Integration.HyconDataPipeline.Visualization_1, Integration.HyconDataPipeline.MetadataStore_1, "Load Data", $techn="", $tags="Relationship", $link="")
 Rel(Integration.HyconDataPipeline.Anontmization_1, Integration.HyconDataPipeline.Visualization_1, "Processing for Visualization", $techn="", $tags="Relationship", $link="")
-Rel(Integration.IntellectusDataFabric.DataSourceGateway_1, Integration.HyconDataPipeline.MetadataStore_1, "", $techn="", $tags="Relationship", $link="")
+Rel(Integration.HyconDataPipeline.Visualization_1, Integration.HyconDataPipeline.MetadataStore_1, "Load Data", $techn="", $tags="Relationship", $link="")
 Rel(Integration.IntellectusDataFabric.DataSourceGateway_1, Integration.HyconDataPipeline.AutonomousDataStore_1, "", $techn="", $tags="Relationship", $link="")
+Rel(Integration.IntellectusDataFabric.DataSourceGateway_1, Integration.HyconDataPipeline.MetadataStore_1, "", $techn="", $tags="Relationship", $link="")
 Rel(Integration.IntellectusDataFabric.MetadataService.MetadataApp_1, Integration.IntellectusDataFabric.DataSourceGateway_1, "", $techn="", $tags="Relationship", $link="")
 
 SHOW_LEGEND(true)
