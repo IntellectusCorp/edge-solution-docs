@@ -1,0 +1,6 @@
+[submodule "bacumen"]
+	path = bacumen
+	url = https://github.com/IntellectusCorp/bacumen-docs.git
+[submodule "workspace/model"]
+	path = workspace/model
+	url = https://github.com/IntellectusCorp/int2-c4-model.git
