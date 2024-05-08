@@ -12,59 +12,26 @@ workspace "Int2 Solution Documents"  {
             "structurizr.groupSeparator" "/"
         }
 
-        group "Stakeholders" {
-            dataConsumer = person "Data Consumer" "A consumer who are needed a data in various context." "Person"
+        group "Bacumen" {
+            !include model/bacumen.dsl
         }
 
-        group "Distributed Datasets" {
-            enterpriseERP = person "ERP" "Traditional type of dataset in enterprise grade." "Data Sources"
-            dataLake = person "Data Lake" "Unstructured or semi-structured dataset" "Data Sources"
-            dataWarehouse = person "Data Warehouse" "Structured dataset." "Data Sources"
-            vehicles = person "Vehicles" "Publish and subscribe data in near real time" "Data Sources"
-            trafficControl = person "Traffic Control Information" "Publish traffic information" "Data Sources"
-
-            group "3rd Party Data Platform" {
-
-                hyconDataPipeline = softwaresystem "Hycon Data Platform" "An autonomous driving dataset generated from scenarios provided by the consortium." {
-                    tags "Hycon"
-                    properties {
-                        "Owner" "Hyconsoft"
-                     }
-                 
-                    hp_autonomousDataStore = container "Autonomous Data Store" "Database" {
-                        tags "Database" "Hycon"
-                    }
-                    hp_metadataStore = container "Metadata Store" "Database" {
-                        tags "Database" "Hycon"
-                    }
-                    hp_metadataExtractor = container "Metadata Extraction" "API Server" {
-                        tags "Hycon"
-                    }
-                    hp_anontmization = container "Anontmization" "API Server" {
-                        tags "Hycon"
-                    }
-                    hp_visualization = container "Visualization" "API Server" {
-                        tags "Hycon"
-                    }
-                }  
-
-                hp_metadataExtractor -> hp_autonomousDataStore "Extract metadata(by file)"
-                hp_metadataExtractor -> hp_anontmization "Anonymization"
-                hp_anontmization -> hp_visualization "Processing for Visualization"
-                hp_visualization -> hp_metadataStore "Load Data"
-            }
-        }
-
-        group "Int2 Data Fabric" {
+        group "Int2Fabric" {
             !include model/data-fabric.dsl
         }
 
-        group "Edge Solution" {
+        # relations Bacumen <> Int2Fabric
+        bacumenVisualizationPanel -> streamPipelineStorage
 
-            edgeComputingPlatform = softwaresystem "Int2 Edge Computing Platform" {
-                description "Int2 Edge Computing Platform"
+        #temp
+        streamPipelineBackend -> fabricApiProvider
+
+        group "EdgePlatform" {
+
+            edgeComputingPlatform = softwaresystem "Edge Computing Platform" {
+                description "Edge Computing Platform"
                 properties {
-                    "Owner" "Intellectus"
+                    "Owner" "intellectus.software"
                 } 
 
                 edgeHub = container "Hub Device" {
@@ -85,26 +52,7 @@ workspace "Int2 Solution Documents"  {
 
         } 
 
-        group "Relation between Hycon Data Pipeline and Int2 Data Fabric" {
-            
-            fabricBroker -> hp_autonomousDataStore
-            fabricBroker -> hp_metadataStore
-        }
-
-        dataConsumer -> fabricApiProvider
-        dataConsumer -> jotter
-
-        knowledgeWeaver -> knowledgeGraphDatabase "build Local Knowledge Graph"
-        knowledgeWeaver -> metaGin 
-        
-        knowledgeSlipboxApiProvider -> knowledgeGraphDatabase "fetch"
-
-        # relationships between people and software systems
-        fabricBroker -> enterpriseERP 
-        fabricBroker -> dataLake 
-        fabricBroker -> dataWarehouse 
-
-        vehicles -> streamPipelineRouter "subscribe in-time traffic information"
+        fabricApiProvider -> bacumenApi
 
         metaGin -> fabricBroker
         metaGin -> fabricDataCatalog "analyze"
@@ -115,54 +63,6 @@ workspace "Int2 Solution Documents"  {
         oddSpecification -> fabricDataCatalog 
         oddSpecification -> fabricBroker 
 
-        fabricApiProvider -> knowledgeSlipboxApiProvider 
-        fabricApiProvider -> metaGin 
-        
-        jotter -> fabricApiProvider
-
-        integration = deploymentEnvironment "Integration" {
-            deploymentNode "Hycon Data Pipeline" {
-                containerInstance hp_autonomousDataStore
-                containerInstance hp_metadataStore
-                containerInstance hp_metadataExtractor
-                containerInstance hp_anontmization
-                containerInstance hp_visualization
-            }
-            deploymentNode "Intellectus Data Fabric" {
-                containerInstance fabricBroker
-                deploymentNode "Metadata Service" {
-                    containerInstance activeMetadata
-                    containerInstance activeMetadataDb
-                }
-                deploymentNode "Knowledge Service" {
-                    containerInstance knowledgeSlipbox
-                    containerInstance knowledgeGraphDatabase
-                }
-                deploymentNode "API Gateway Service" {
-                    containerInstance fabricApiProvider
-                }
-            }
-        }
-
-        deDataPipeline = deploymentEnvironment "DataPipeline" {
-
-            deploymentNode "Real World" {
-                infrastructureNode  vehicles
-                infrastructureNode  trafficControl
-            }
-
-            deploymentNode "Router" {
-                containerInstance streamPipelineRouter
-                instances 3
-            }
-
-            deploymentNode "Data Pipeline Backend" {
-                containerInstance streamPipelineBackend
-                containerInstance streamPipelineStorage
-            }
-
-
-        }
     }
 
     views {
@@ -190,34 +90,22 @@ workspace "Int2 Solution Documents"  {
             autoLayout
         }
 
-        systemcontext edgeComputingPlatform "SystemContextForEdgeComputingPlatform" {
+        systemcontext dataFabric "SystemContextForEdgeComputingPlatform" {
             include *
             animation {
-               edgeComputingPlatform
+               dataFabric
             }
-            autoLayout
+            autoLayout lr
         }
 
-        container dataFabric "Containers" {
+        container dataFabric "ContainersForDataFabric" {
             include *
             autoLayout
         }
 
-        dynamic knowledgeSlipbox "LocalKnowledgeGraph" "로컬 지식그래프 아키텍처" {
-            metaGin -> fabricBroker "access data source via Broker"
-            knowledgeWeaver -> metaGin "weave Knowledge from Metadata"
-            knowledgeWeaver -> knowledgeGraphDatabase "build Local Knowledge Graph"
-            knowledgeSlipboxApiProvider -> knowledgeGraphDatabase "fetch"
+        container bacumen "ContainersForBacumen" {
+            include *
             autoLayout
-            description "로컬 지식그래프 아키텍처"
-        }
-
-        dynamic activeMetadata "WorkflowBuildingLocalKnowledgeGraph" "Local Knowledge Graph 구축 흐름도" {
-            fabricDataCatalog -> metaGin "analyze"
-            metaGin -> knowledgeWeaver "weave Knowledge from Metadata"
-            knowledgeWeaver -> knowledgeGraphDatabase "build Local Knowledge Graph"
-            autoLayout lr
-            description "workflow to build Local Knowledge Graph"
         }
 
         dynamic activeMetadata "WorkflowBuildingFabricDataCatalog" "Fabric Data Catalog 구축 흐름도" {
@@ -229,24 +117,21 @@ workspace "Int2 Solution Documents"  {
             description "workflow to build Local Knowledge Graph"
         }
 
-        dynamic knowledgeSlipbox "KnowledgeCatalog" "Knowledge Catalog 개념도" {
-            metaGin -> fabricDataCatalog "fetch"
-            knowledgeSlipboxApiProvider -> knowledgeGraphDatabase "fetch"
-            fabricApiProvider -> knowledgeSlipboxApiProvider 
-            fabricApiProvider -> metaGin
-            jotter -> fabricApiProvider "use as Knowledge Catalog"
+        
+        dynamic bacumen "BacumenDatasourceConnect" "Bacumen에서 대시보드에 표시할 데이터소스 연동" {
+            edgeHub -> streamPipelineBackend "Data Ingestion"
+            streamPipelineBackend -> streamPipelineStorage "store"
+            bacumenApi -> fabricApiProvider "Request to access to specific dataource"
+            bacumenVisualizationPanel -> streamPipelineStorage "connect"
+        }
+
+        dynamic bacumen "BacumenPubMessageToEdge" "Bacumen에서 Edge에 메시지 전송" {
+            bacumenApi -> fabricApiProvider "Regist Webhook url on subscription topic"
+            edgeHub -> streamPipelineBackend "Publish message"
+            streamPipelineBackend -> fabricApiProvider "notify"
+            fabricApiProvider -> bacumenApi "Call webhook with message payload"
+
             autoLayout lr
-            description "Knowledge Catalog 개념도"
-        }
-
-        deployment * integration "HeighLevelDesign " {
-            include *
-            autoLayout
-        }
-
-        deployment * deDataPipeline "DeployDataPipeline" {
-            include *
-            autoLayout
         }
 
         styles {
