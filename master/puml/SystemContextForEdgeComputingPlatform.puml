@@ -1,8 +1,8 @@
 @startuml
 set separator none
-title Int2 Edge Computing Platform - System Context
+title Int2 Data Fabric Platform - System Context
 
-top to bottom direction
+left to right direction
 
 !include <C4/C4>
 !include <C4/C4_Context>
@@ -11,22 +11,31 @@ AddElementTag("Software System", $bgColor="#1168bd", $borderColor="#0b4884", $fo
 
 AddRelTag("Relationship", $textColor="#707070", $lineColor="#707070", $lineStyle = "")
 
-AddBoundaryTag("Edge Solution", $borderColor="#cccccc", $fontColor="#cccccc", $borderStyle="Dashed", $borderThickness="1")
-Boundary(group_1, "Edge Solution", $tags="Edge Solution") {
+AddBoundaryTag("Bacumen", $borderColor="#cccccc", $fontColor="#cccccc", $borderStyle="Dashed", $borderThickness="1")
+Boundary(group_1, "Bacumen", $tags="Bacumen") {
   WithoutPropertyHeader()
-  AddProperty("Owner","Intellectus")
-  System(Int2EdgeComputingPlatform, "Int2 Edge Computing Platform", $descr="Int2 Edge Computing Platform", $tags="Software System", $link="")
+  AddProperty("Owner","intellectus.software")
+  System(Bacumen, "Bacumen", $descr="Business Acumen provides a visualization to act for the business sucess.", $tags="Software System", $link="")
 }
 
-AddBoundaryTag("Int2 Data Fabric", $borderColor="#cccccc", $fontColor="#cccccc", $borderStyle="Dashed", $borderThickness="1")
-Boundary(group_2, "Int2 Data Fabric", $tags="Int2 Data Fabric") {
+AddBoundaryTag("EdgePlatform", $borderColor="#cccccc", $fontColor="#cccccc", $borderStyle="Dashed", $borderThickness="1")
+Boundary(group_2, "EdgePlatform", $tags="EdgePlatform") {
+  WithoutPropertyHeader()
+  AddProperty("Owner","intellectus.software")
+  System(EdgeComputingPlatform, "Edge Computing Platform", $descr="Edge Computing Platform", $tags="Software System", $link="")
+}
+
+AddBoundaryTag("Int2Fabric", $borderColor="#cccccc", $fontColor="#cccccc", $borderStyle="Dashed", $borderThickness="1")
+Boundary(group_3, "Int2Fabric", $tags="Int2Fabric") {
   WithoutPropertyHeader()
   AddProperty("Owner","Intellectus")
   System(Int2DataFabricPlatform, "Int2 Data Fabric Platform", $descr="Autonomous Bigdata Platform has been powerd by Intellectu's Data Fabric Platform which contains the data virtualizations to manage data and the semantic search to discover and the data pipelines to make automated workflows.", $tags="Software System", $link="")
 }
 
 
-Rel(Int2EdgeComputingPlatform, Int2DataFabricPlatform, "", $techn="", $tags="Relationship", $link="")
+Rel(Bacumen, Int2DataFabricPlatform, "", $techn="", $tags="Relationship", $link="")
+Rel(EdgeComputingPlatform, Int2DataFabricPlatform, "", $techn="", $tags="Relationship", $link="")
+Rel(Int2DataFabricPlatform, Bacumen, "", $techn="", $tags="Relationship", $link="")
 
 SHOW_LEGEND(true)
 @enduml

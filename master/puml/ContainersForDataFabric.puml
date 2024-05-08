@@ -1,0 +1,74 @@
+@startuml
+set separator none
+title Int2 Data Fabric Platform - Containers
+
+top to bottom direction
+
+!include <C4/C4>
+!include <C4/C4_Context>
+!include <C4/C4_Container>
+
+AddElementTag("Software System", $bgColor="#1168bd", $borderColor="#0b4884", $fontColor="#ffffff", $sprite="", $shadowing="", $borderStyle="Solid", $borderThickness="1")
+AddElementTag("Container,Database", $bgColor="#438dd5", $borderColor="#2e6295", $fontColor="#ffffff", $sprite="", $shadowing="", $borderStyle="Solid", $borderThickness="1")
+AddElementTag("Container,Web Browser", $bgColor="#438dd5", $borderColor="#2e6295", $fontColor="#ffffff", $sprite="", $shadowing="", $borderStyle="Solid", $borderThickness="1")
+AddElementTag("Container", $bgColor="#438dd5", $borderColor="#2e6295", $fontColor="#ffffff", $sprite="", $shadowing="", $borderStyle="Solid", $borderThickness="1")
+
+AddRelTag("Relationship", $textColor="#707070", $lineColor="#707070", $lineStyle = "")
+
+AddBoundaryTag("Software System", $bgColor="#ffffff", $borderColor="#0b4884", $fontColor="#0b4884", $shadowing="", $borderStyle="Solid", $borderThickness="1")
+
+WithoutPropertyHeader()
+AddProperty("Owner","intellectus.software")
+System(Bacumen, "Bacumen", $descr="Business Acumen provides a visualization to act for the business sucess.", $tags="Software System", $link="")
+WithoutPropertyHeader()
+AddProperty("Owner","intellectus.software")
+System(EdgeComputingPlatform, "Edge Computing Platform", $descr="Edge Computing Platform", $tags="Software System", $link="")
+
+System_Boundary("Int2DataFabricPlatform_boundary", "Int2 Data Fabric Platform", $tags="Software System") {
+  AddBoundaryTag("Backend Services", $borderColor="#cccccc", $fontColor="#cccccc", $borderStyle="Dashed", $borderThickness="1")
+  Boundary(group_1, "Backend Services", $tags="Backend Services") {
+      AddBoundaryTag("Backend Services/API Gateway Service", $borderColor="#cccccc", $fontColor="#cccccc", $borderStyle="Dashed", $borderThickness="1")
+      Boundary(group_2, "API Gateway Service", $tags="Backend Services/API Gateway Service") {
+        Container(Int2DataFabricPlatform.APIService, "API Service", $techn="", $descr="API Gateway Managed Service", $tags="Container", $link="")
+      }
+
+      AddBoundaryTag("Backend Services/Data Pipeline Service", $borderColor="#cccccc", $fontColor="#cccccc", $borderStyle="Dashed", $borderThickness="1")
+      Boundary(group_3, "Data Pipeline Service", $tags="Backend Services/Data Pipeline Service") {
+        Container(Int2DataFabricPlatform.StreamPipelineBackend, "Stream Pipeline Backend", $techn="Container: Zenoh Backend S3", $descr="Subscribe data to store", $tags="Container", $link="")
+        Container(Int2DataFabricPlatform.StreamPipelineRouter, "Stream Pipeline Router", $techn="Container: Zenoh Router", $descr="Router", $tags="Container", $link="")
+        ContainerDb(Int2DataFabricPlatform.StreamPipelineStorage, "Stream Pipeline Storage", $techn="AWS S3", $descr="Raw data storage", $tags="Container,Database", $link="")
+        Container(Int2DataFabricPlatform.DataSourceGateway, "Data Source Gateway", $techn="Container: Java Application", $descr="Manage data pipeline between distburited data source and Data Fabric in secure.", $tags="Container", $link="")
+      }
+
+      AddBoundaryTag("Backend Services/Knowledge Service", $borderColor="#cccccc", $fontColor="#cccccc", $borderStyle="Dashed", $borderThickness="1")
+      Boundary(group_4, "Knowledge Service", $tags="Backend Services/Knowledge Service") {
+        ContainerDb(Int2DataFabricPlatform.KnowledgeGraphDatabase, "Knowledge Graph Database", $techn="", $descr="DB: Neo4j or AWS Neptune", $tags="Container,Database", $link="")
+        Container(Int2DataFabricPlatform.KnowledgeGraphApp, "Knowledge Graph App", $techn="Container: Serverless Java or Typescript Application", $descr="Provides", $tags="Container", $link="")
+      }
+
+      AddBoundaryTag("Backend Services/Metadata Service", $borderColor="#cccccc", $fontColor="#cccccc", $borderStyle="Dashed", $borderThickness="1")
+      Boundary(group_5, "Metadata Service", $tags="Backend Services/Metadata Service") {
+        Container(Int2DataFabricPlatform.MetadataApp, "Metadata App", $techn="", $descr="Active Metadata", $tags="Container", $link="")
+        ContainerDb(Int2DataFabricPlatform.MetadataDatabase, "Metadata Database", $techn="", $descr="DB: AWS Aurora Postgrsql", $tags="Container,Database", $link="")
+      }
+
+  }
+
+  AddBoundaryTag("Client-side", $borderColor="#cccccc", $fontColor="#cccccc", $borderStyle="Dashed", $borderThickness="1")
+  Boundary(group_6, "Client-side", $tags="Client-side") {
+    Container(Int2DataFabricPlatform.WebApplication, "Web Application", $techn="", $descr="Serverless nextjs", $tags="Container,Web Browser", $link="")
+  }
+
+}
+
+Rel(Int2DataFabricPlatform.StreamPipelineBackend, Int2DataFabricPlatform.StreamPipelineRouter, "subscribe data to store", $techn="", $tags="Relationship", $link="")
+Rel(Int2DataFabricPlatform.StreamPipelineBackend, Int2DataFabricPlatform.StreamPipelineStorage, "", $techn="", $tags="Relationship", $link="")
+Rel(Bacumen, Int2DataFabricPlatform.StreamPipelineStorage, "", $techn="", $tags="Relationship", $link="")
+Rel(Int2DataFabricPlatform.StreamPipelineBackend, Int2DataFabricPlatform.APIService, "", $techn="", $tags="Relationship", $link="")
+Rel(EdgeComputingPlatform, Int2DataFabricPlatform.StreamPipelineBackend, "", $techn="", $tags="Relationship", $link="")
+Rel(Int2DataFabricPlatform.APIService, Bacumen, "", $techn="", $tags="Relationship", $link="")
+Rel(Int2DataFabricPlatform.MetadataApp, Int2DataFabricPlatform.DataSourceGateway, "", $techn="", $tags="Relationship", $link="")
+Rel(Int2DataFabricPlatform.MetadataApp, Int2DataFabricPlatform.MetadataDatabase, "", $techn="", $tags="Relationship", $link="")
+
+SHOW_LEGEND(true)
+@enduml

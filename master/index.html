@@ -31,187 +31,239 @@
       <aside class="menu p-3">
         <p class="menu-label">General</p>
         <ul class="menu-list has-site-branding">
-          <li><a href="./" class="is-active">Home</a><a href="software-systems/" class="">Software Systems</a></li>
+          <li><a href="./" class="is-active">Home</a><a href="software-systems/" class="">Software Systems</a><a href="bacumen-communication-flow/" class="">Bacumen Communication Flow</a></li>
         </ul>
         <p class="menu-label">Software systems</p>
         <ul class="menu-list has-site-branding">
-          <li><a href="hycon-data-platform/" class="">Hycon Data Platform</a><a href="int2-data-fabric-platform/" class="">Int2 Data Fabric Platform</a><a href="int2-edge-computing-platform/" class="">Int2 Edge Computing Platform</a></li>
+          <li><a href="bacumen/" class="">Bacumen</a><a href="edge-computing-platform/" class="">Edge Computing Platform</a><a href="int2-data-fabric-platform/" class="">Int2 Data Fabric Platform</a></li>
         </ul>
       </aside>
       <div class="container is-fluid has-background-white">
         <div class="content p-3">
-          <div><h2>인텔렉투스 솔루션 데모 시나리오</h2>
-<p>본 웹 사이트는 인텔렉투스에서 제공하고 있는 솔루션에 대한 아키텍처에 관한 문서들을 제공하고 있습니다. 문서들은 기본적으로는 <a href="https://c4model.com/">C4 Model</a> 에 기반한 산출물이며, 추가적으로는 특정 주제에 최적화된 형태의 문서들도 포함하고 있습니다.</p>
-<h3>제공하고 있는 문서들</h3>
+          <div><h2>인텔렉투스 엣지 솔루션 데모 시나리오</h2>
+<p>본 웹 사이트는 인텔렉투스에서 제공하고 있는 솔루션에 대한 아키텍처에 관한 문서들을 제공하고 있습니다. 문서들은 기본적으로는 <a href="https://c4model.com/">C4 Model</a> 에 기반한 산출물이며, 추가적으로는 특정 주제를 설명하는 문서들을 포함 합니다.</p>
+<h3>인텔렉투스 솔루션 스택</h3>
 <ol>
  <li>
-  <p><a href="data-fabric/context">System Context View</a>: 전체 시스템이 외부의 다른 시스템과 어떤 상호 관계가 있는지 나타냅니다. 시스템의 세부 항목들은 의도적으로 생략 합니다. 이해관계자와 역할 등을 표시하여 도메인이나 엔지니어링의 전문적인 배경이 없는 사람도 비교적 쉽게 이해할 수 있습니다. 본 프로젝트에서는 Data Fabric 과 자율주행 빅데이터를 다루는 일종의 Data Lake 인 하이콘의 데이터 파이프라인의 관계 및 다른 분산 데이터 저장소와의 관계를 설명하고 있습니다.</p></li>
+  <p>Edge Computing Platform: 자체 개발한 모듈형 엣지 컴퓨팅 머신을 통해 Edge Devices 와 통신하고 Data Platform 과 통합 합니다.</p></li>
  <li>
-  <p><a href="data-fabric/container">Container diagram</a>: 컨테이너는 코드를 실행하거나 데이터를 저장하는 등 실행/배포 가능한 단위 입니다. 소프트웨어 시스템에서 각 역할에 대한 요소들이 어떻게 배치(deployment)되고 어떠한 기술 사양으로 구현되는지에 대한 정보를 포함하고 있습니다.</p></li>
+  <p>INT2 Fabric(Data Platform): 데이터 전 주기에 대한 관리 솔루션을 제공 합니다.</p></li>
+ <li>
+  <p>Bacumen(Business Acumen): 데이터 시각화를 통해서 비즈니스 통찰력을 제공합니다.</p></li>
 </ol>
-<h3>System Landscape Diagram</h3>
-<p>System Landscape Diagram 은 System Context View 와 동일한 수준에서 시스템이 외부의 요소들과 어떤 관계를 갖는지에 대한 전반적인 뷰를 나타냅니다. 
+<p>
  <div>
-  <figure style="width: min(100%, 434px);">
+  <figure style="width: min(100%, 566px);">
    <div>
     <!--?xml version="1.0" encoding="us-ascii" standalone="no"?-->
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" preserveAspectRatio="meet" version="1.1" viewBox="0 0 434 710" zoomAndPan="magnify">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" preserveAspectRatio="meet" version="1.1" viewBox="0 0 566 580" zoomAndPan="magnify">
      <defs /><g>
-      <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="376" x="25" y="22.9951">Int2 Edge Computing Platform - System Context</text><!--cluster group_1-->
+      <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="335" x="108.5" y="22.9951">Int2 Data Fabric Platform - System Context</text><!--cluster group_1-->
       <g id="cluster_group_1">
-       <rect fill="none" height="179" rx="2.5" ry="2.5" style="stroke:#CCCCCC;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="238" x="101.5" y="44.2969" />
-       <text fill="#CCCCCC" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="120" x="160.5" y="61.1484">Edge Solution</text>
+       <rect fill="none" height="177" rx="2.5" ry="2.5" style="stroke:#CCCCCC;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="273" x="7" y="51.2969" />
+       <text fill="#CCCCCC" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="81" x="103" y="68.1484">Bacumen</text>
       </g><!--cluster group_2-->
       <g id="cluster_group_2">
-       <rect fill="none" height="294" rx="2.5" ry="2.5" style="stroke:#CCCCCC;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="246" x="97.5" y="267.2969" />
-       <text fill="#CCCCCC" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="142" x="149.5" y="284.1484">Int2 Data Fabric</text>
-      </g><!--entity Int2EdgeComputingPlatform-->
-      <g id="elem_Int2EdgeComputingPlatform">
-       <a href="int2-edge-computing-platform/container/" target="_top" title="int2-edge-computing-platform/container/" xlink:actuate="onRequest" xlink:href="int2-edge-computing-platform/container/" xlink:show="new" xlink:title="int2-edge-computing-platform/container/" xlink:type="simple">
-        <rect fill="#1168BD" height="126.4375" rx="2.5" ry="2.5" style="stroke:#0B4884;stroke-width:1.0;" width="206" x="117.5" y="81.2969" />
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="36" x="127.5" y="106.1484">Int2</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="6" x="163.5" y="106.1484">&nbsp;</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="43" x="169.5" y="106.1484">Edge</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="6" x="212.5" y="106.1484">&nbsp;</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="95" x="218.5" y="106.1484">Computing</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="76" x="182.5" y="124.7734">Platform</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="218.5" y="141.542">&nbsp;</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="26" x="147.5" y="157.8389">Int2</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="173.5" y="157.8389">&nbsp;</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="36" x="177.5" y="157.8389">Edge</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="213.5" y="157.8389">&nbsp;</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76" x="217.5" y="157.8389">Computing</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="192.5" y="174.1357">Platform</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45" x="152" y="192.4326">Owner</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="82" x="206" y="192.4326">Intellectus</text>
-        <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="148" x2="293" y1="179.4375" y2="179.4375" />
-        <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="148" x2="293" y1="195.7344" y2="195.7344" />
-        <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="148" x2="148" y1="179.4375" y2="195.7344" />
-        <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="201" x2="201" y1="179.4375" y2="195.7344" />
-        <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="293" x2="293" y1="179.4375" y2="195.7344" />
+       <rect fill="none" height="163" rx="2.5" ry="2.5" style="stroke:#CCCCCC;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="273" x="7" y="252.2969" />
+       <text fill="#CCCCCC" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="119" x="84" y="269.1484">EdgePlatform</text>
+      </g><!--cluster group_3-->
+      <g id="cluster_group_3">
+       <rect fill="none" height="295" rx="2.5" ry="2.5" style="stroke:#CCCCCC;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="246" x="314" y="44.2969" />
+       <text fill="#CCCCCC" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="89" x="392.5" y="61.1484">Int2Fabric</text>
+      </g><!--entity Bacumen-->
+      <g id="elem_Bacumen">
+       <a href="bacumen/context/" target="_top" title="bacumen/context/" xlink:actuate="onRequest" xlink:href="bacumen/context/" xlink:show="new" xlink:title="bacumen/context/" xlink:type="simple">
+        <rect fill="#1168BD" height="124.1094" rx="2.5" ry="2.5" style="stroke:#0B4884;stroke-width:1.0;" width="241" x="23" y="88.2969" />
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="81" x="103" y="113.1484">Bacumen</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="141.5" y="129.917">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64" x="43.5" y="146.2139">Business</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="107.5" y="146.2139">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57" x="111.5" y="146.2139">Acumen</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="168.5" y="146.2139">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="172.5" y="146.2139">provides</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="231.5" y="146.2139">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="235.5" y="146.2139">a</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83" x="56" y="162.5107">visualization</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="139" y="162.5107">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="14" x="143" y="162.5107">to</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="157" y="162.5107">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="21" x="161" y="162.5107">act</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="182" y="162.5107">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="18" x="186" y="162.5107">for</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="204" y="162.5107">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="23" x="208" y="162.5107">the</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63" x="83" y="178.8076">business</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="146" y="178.8076">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54" x="150" y="178.8076">sucess.</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45" x="37" y="197.1045">Owner</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="158" x="91" y="197.1045">intellectus.software</text>
+        <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="33" x2="254" y1="184.1094" y2="184.1094" />
+        <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="33" x2="254" y1="200.4063" y2="200.4063" />
+        <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="33" x2="33" y1="184.1094" y2="200.4063" />
+        <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="86" x2="86" y1="184.1094" y2="200.4063" />
+        <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="254" x2="254" y1="184.1094" y2="200.4063" />
+       </a>
+      </g><!--entity EdgeComputingPlatform-->
+      <g id="elem_EdgeComputingPlatform">
+       <a href="edge-computing-platform/context/" target="_top" title="edge-computing-platform/context/" xlink:actuate="onRequest" xlink:href="edge-computing-platform/context/" xlink:show="new" xlink:title="edge-computing-platform/context/" xlink:type="simple">
+        <rect fill="#1168BD" height="110.1406" rx="2.5" ry="2.5" style="stroke:#0B4884;stroke-width:1.0;" width="241" x="23" y="289.2969" />
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="43" x="71.5" y="314.1484">Edge</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="6" x="114.5" y="314.1484">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="95" x="120.5" y="314.1484">Computing</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="76" x="105.5" y="332.7734">Platform</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="141.5" y="349.542">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="36" x="55.5" y="365.8389">Edge</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="91.5" y="365.8389">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76" x="95.5" y="365.8389">Computing</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="171.5" y="365.8389">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="175.5" y="365.8389">Platform</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45" x="37" y="384.1357">Owner</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="158" x="91" y="384.1357">intellectus.software</text>
+        <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="33" x2="254" y1="371.1406" y2="371.1406" />
+        <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="33" x2="254" y1="387.4375" y2="387.4375" />
+        <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="33" x2="33" y1="371.1406" y2="387.4375" />
+        <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="86" x2="86" y1="371.1406" y2="387.4375" />
+        <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="254" x2="254" y1="371.1406" y2="387.4375" />
        </a>
       </g><!--entity Int2DataFabricPlatform-->
       <g id="elem_Int2DataFabricPlatform">
-       <a href="int2-data-fabric-platform/context/" target="_top" title="int2-data-fabric-platform/context/" xlink:actuate="onRequest" xlink:href="int2-data-fabric-platform/context/" xlink:show="new" xlink:title="int2-data-fabric-platform/context/" xlink:type="simple">
-        <rect fill="#1168BD" height="240.5156" rx="2.5" ry="2.5" style="stroke:#0B4884;stroke-width:1.0;" width="214" x="113.5" y="304.2969" />
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="36" x="149.5" y="329.1484">Int2</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="6" x="185.5" y="329.1484">&nbsp;</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="41" x="191.5" y="329.1484">Data</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="6" x="232.5" y="329.1484">&nbsp;</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="53" x="238.5" y="329.1484">Fabric</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="76" x="182.5" y="347.7734">Platform</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="218.5" y="364.542">&nbsp;</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89" x="148" y="380.8389">Autonomous</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="237" y="380.8389">&nbsp;</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52" x="241" y="380.8389">Bigdata</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="130" y="397.1357">Platform</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="186" y="397.1357">&nbsp;</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="25" x="190" y="397.1357">has</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="215" y="397.1357">&nbsp;</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="36" x="219" y="397.1357">been</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="255" y="397.1357">&nbsp;</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52" x="259" y="397.1357">powerd</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="16" x="133" y="413.4326">by</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="149" y="413.4326">&nbsp;</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="74" x="153" y="413.4326">Intellectu's</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="227" y="413.4326">&nbsp;</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="32" x="231" y="413.4326">Data</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="263" y="413.4326">&nbsp;</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41" x="267" y="413.4326">Fabric</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="125.5" y="429.7295">Platform</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="181.5" y="429.7295">&nbsp;</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40" x="185.5" y="429.7295">which</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="225.5" y="429.7295">&nbsp;</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="229.5" y="429.7295">contains</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="288.5" y="429.7295">&nbsp;</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="23" x="292.5" y="429.7295">the</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="30" x="148" y="446.0264">data</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="178" y="446.0264">&nbsp;</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="93" x="182" y="446.0264">virtualizations</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="275" y="446.0264">&nbsp;</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="14" x="279" y="446.0264">to</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="147" y="462.3232">manage</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="203" y="462.3232">&nbsp;</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="30" x="207" y="462.3232">data</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="237" y="462.3232">&nbsp;</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="26" x="241" y="462.3232">and</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="267" y="462.3232">&nbsp;</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="23" x="271" y="462.3232">the</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63" x="123.5" y="478.6201">semantic</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="186.5" y="478.6201">&nbsp;</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47" x="190.5" y="478.6201">search</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="237.5" y="478.6201">&nbsp;</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="14" x="241.5" y="478.6201">to</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="255.5" y="478.6201">&nbsp;</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="58" x="259.5" y="478.6201">discover</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="26" x="135" y="494.917">and</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="161" y="494.917">&nbsp;</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="23" x="165" y="494.917">the</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="188" y="494.917">&nbsp;</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="30" x="192" y="494.917">data</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="222" y="494.917">&nbsp;</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62" x="226" y="494.917">pipelines</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="288" y="494.917">&nbsp;</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="14" x="292" y="494.917">to</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="38" x="124" y="511.2139">make</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="162" y="511.2139">&nbsp;</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="166" y="511.2139">automated</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="241" y="511.2139">&nbsp;</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="72" x="245" y="511.2139">workflows.</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45" x="152" y="529.5107">Owner</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="82" x="206" y="529.5107">Intellectus</text>
-        <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="148" x2="293" y1="516.5156" y2="516.5156" />
-        <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="148" x2="293" y1="532.8125" y2="532.8125" />
-        <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="148" x2="148" y1="516.5156" y2="532.8125" />
-        <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="201" x2="201" y1="516.5156" y2="532.8125" />
-        <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="293" x2="293" y1="516.5156" y2="532.8125" />
+       <a href="int2-data-fabric-platform/container/" target="_top" title="int2-data-fabric-platform/container/" xlink:actuate="onRequest" xlink:href="int2-data-fabric-platform/container/" xlink:show="new" xlink:title="int2-data-fabric-platform/container/" xlink:type="simple">
+        <rect fill="#1168BD" height="240.5156" rx="2.5" ry="2.5" style="stroke:#0B4884;stroke-width:1.0;" width="214" x="330" y="81.7969" />
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="36" x="366" y="106.6484">Int2</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="6" x="402" y="106.6484">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="41" x="408" y="106.6484">Data</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="6" x="449" y="106.6484">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="53" x="455" y="106.6484">Fabric</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="76" x="399" y="125.2734">Platform</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="435" y="142.042">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89" x="364.5" y="158.3389">Autonomous</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="453.5" y="158.3389">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52" x="457.5" y="158.3389">Bigdata</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="346.5" y="174.6357">Platform</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="402.5" y="174.6357">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="25" x="406.5" y="174.6357">has</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="431.5" y="174.6357">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="36" x="435.5" y="174.6357">been</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="471.5" y="174.6357">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52" x="475.5" y="174.6357">powerd</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="16" x="349.5" y="190.9326">by</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="365.5" y="190.9326">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="74" x="369.5" y="190.9326">Intellectu's</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="443.5" y="190.9326">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="32" x="447.5" y="190.9326">Data</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="479.5" y="190.9326">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41" x="483.5" y="190.9326">Fabric</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="342" y="207.2295">Platform</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="398" y="207.2295">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40" x="402" y="207.2295">which</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="442" y="207.2295">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="446" y="207.2295">contains</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="505" y="207.2295">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="23" x="509" y="207.2295">the</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="30" x="364.5" y="223.5264">data</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="394.5" y="223.5264">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="93" x="398.5" y="223.5264">virtualizations</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="491.5" y="223.5264">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="14" x="495.5" y="223.5264">to</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="363.5" y="239.8232">manage</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="419.5" y="239.8232">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="30" x="423.5" y="239.8232">data</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="453.5" y="239.8232">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="26" x="457.5" y="239.8232">and</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="483.5" y="239.8232">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="23" x="487.5" y="239.8232">the</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63" x="340" y="256.1201">semantic</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="403" y="256.1201">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47" x="407" y="256.1201">search</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="454" y="256.1201">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="14" x="458" y="256.1201">to</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="472" y="256.1201">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="58" x="476" y="256.1201">discover</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="26" x="351.5" y="272.417">and</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="377.5" y="272.417">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="23" x="381.5" y="272.417">the</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="404.5" y="272.417">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="30" x="408.5" y="272.417">data</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="438.5" y="272.417">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62" x="442.5" y="272.417">pipelines</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="504.5" y="272.417">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="14" x="508.5" y="272.417">to</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="38" x="340.5" y="288.7139">make</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="378.5" y="288.7139">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="382.5" y="288.7139">automated</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="457.5" y="288.7139">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="72" x="461.5" y="288.7139">workflows.</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45" x="368.5" y="307.0107">Owner</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="82" x="422.5" y="307.0107">Intellectus</text>
+        <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="364.5" x2="509.5" y1="294.0156" y2="294.0156" />
+        <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="364.5" x2="509.5" y1="310.3125" y2="310.3125" />
+        <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="364.5" x2="364.5" y1="294.0156" y2="310.3125" />
+        <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="417.5" x2="417.5" y1="294.0156" y2="310.3125" />
+        <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="509.5" x2="509.5" y1="294.0156" y2="310.3125" />
        </a>
-      </g><!--link Int2EdgeComputingPlatform to Int2DataFabricPlatform-->
-      <g id="link_Int2EdgeComputingPlatform_Int2DataFabricPlatform">
-       <path d="M220.5,207.4469 C220.5,235.9869 220.5,262.8269 220.5,296.1469 " fill="none" id="Int2EdgeComputingPlatform-to-Int2DataFabricPlatform" style="stroke:#707070;stroke-width:1.0;" />
-       <polygon fill="#707070" points="220.5,304.1469,223.5,296.1469,217.5,296.1469,220.5,304.1469" style="stroke:#707070;stroke-width:1.0;" />
-       <text fill="#707070" font-family="sans-serif" font-size="0" lengthAdjust="spacing" textLength="0" x="221.5" y="240.2969">.</text>
+      </g><!--link Bacumen to Int2DataFabricPlatform-->
+      <g id="link_Bacumen_Int2DataFabricPlatform">
+       <path d="M264.33,171.6769 C286,175.5369 300.5843,178.1422 321.8343,181.9322 " fill="none" id="Bacumen-to-Int2DataFabricPlatform" style="stroke:#707070;stroke-width:1.0;" />
+       <polygon fill="#707070" points="329.71,183.3369,322.361,178.9788,321.3075,184.8856,329.71,183.3369" style="stroke:#707070;stroke-width:1.0;" />
+       <text fill="#707070" font-family="sans-serif" font-size="0" lengthAdjust="spacing" textLength="0" x="297" y="167.2969">.</text>
+      </g><!--link Int2DataFabricPlatform to Bacumen-->
+      <g id="link_Int2DataFabricPlatform_Bacumen">
+       <path d="M329.82,202.3769 C318.36,201.4569 306.91,200.1469 296,198.2969 C285.53,196.5269 282.5424,196.132 271.8324,193.462 " fill="none" id="Int2DataFabricPlatform-to-Bacumen" style="stroke:#707070;stroke-width:1.0;" />
+       <polygon fill="#707070" points="264.07,191.5269,271.1067,196.3729,272.5581,190.5511,264.07,191.5269" style="stroke:#707070;stroke-width:1.0;" />
+       <text fill="#707070" font-family="sans-serif" font-size="0" lengthAdjust="spacing" textLength="0" x="297" y="187.2969">.</text>
+      </g><!--link EdgeComputingPlatform to Int2DataFabricPlatform-->
+      <g id="link_EdgeComputingPlatform_Int2DataFabricPlatform">
+       <path d="M257.62,289.1969 C281.3,277.6569 299.0075,269.0295 322.4375,257.6195 " fill="none" id="EdgeComputingPlatform-to-Int2DataFabricPlatform" style="stroke:#707070;stroke-width:1.0;" />
+       <polygon fill="#707070" points="329.63,254.1169,321.124,254.9223,323.751,260.3167,329.63,254.1169" style="stroke:#707070;stroke-width:1.0;" />
+       <text fill="#707070" font-family="sans-serif" font-size="0" lengthAdjust="spacing" textLength="0" x="297" y="259.2969">.</text>
       </g>
-      <rect fill="none" height="16.2969" style="stroke:none;stroke-width:1.0;" width="392" x="17" y="585.2969" />
-      <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="59" x="17" y="598.292">Legend</text>
-      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="76" y="598.292">&nbsp;</text>
-      <rect fill="none" height="16.2969" style="stroke:none;stroke-width:1.0;" width="392" x="17" y="601.5938" />
-      <text fill="#444444" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="21" y="614.5889">▯</text>
-      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="29" y="614.5889">&nbsp;</text>
-      <text fill="#444444" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="37" y="614.5889">boundary</text>
-      <text fill="#444444" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="43" x="106" y="615.5322">(dashed)</text>
-      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="149" y="614.5889">&nbsp;</text>
-      <rect fill="#1168BD" height="16.2969" style="stroke:none;stroke-width:1.0;" width="392" x="17" y="617.8906" />
-      <text fill="#0B4884" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="21" y="630.8857">▯</text>
-      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="29" y="630.8857">&nbsp;</text>
-      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="37" y="630.8857">Software System</text>
-      <text fill="#FFFFFF" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="114" x="156" y="631.8291">($lineStyle, thickness 1)</text>
-      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="270" y="630.8857">&nbsp;</text>
-      <text fill="#707070" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="21" y="647.1826">─</text>
-      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="29" y="647.1826">&nbsp;</text>
-      <text fill="#707070" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85" x="37" y="647.1826">Relationship</text>
-      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="126" y="647.1826">&nbsp;</text>
-      <rect fill="#66622E" height="16.2969" style="stroke:none;stroke-width:1.0;" width="392" x="17" y="650.4844" />
-      <text fill="#CCCCCC" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="21" y="663.4795">▯</text>
-      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="29" y="663.4795">&nbsp;</text>
-      <text fill="#CCCCCC" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="165" x="37" y="663.4795">Edge Solution boundary</text>
-      <text fill="#CCCCCC" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="188" x="206" y="664.4229">(last back color, $lineStyle, thickness 1)</text>
-      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="394" y="663.4795">&nbsp;</text>
-      <rect fill="#66622E" height="16.2969" style="stroke:none;stroke-width:1.0;" width="392" x="17" y="666.7813" />
-      <text fill="#CCCCCC" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="21" y="679.7764">▯</text>
-      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="29" y="679.7764">&nbsp;</text>
-      <text fill="#CCCCCC" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="176" x="37" y="679.7764">Int2 Data Fabric boundary</text>
-      <text fill="#CCCCCC" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="188" x="217" y="680.7197">(last back color, $lineStyle, thickness 1)</text>
-      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="405" y="679.7764">&nbsp;</text>
-      <line style="stroke:none;stroke-width:1.0;" x1="17" x2="409" y1="585.2969" y2="585.2969" />
-      <line style="stroke:none;stroke-width:1.0;" x1="17" x2="409" y1="601.5938" y2="601.5938" />
-      <line style="stroke:none;stroke-width:1.0;" x1="17" x2="409" y1="617.8906" y2="617.8906" />
-      <line style="stroke:none;stroke-width:1.0;" x1="17" x2="409" y1="634.1875" y2="634.1875" />
-      <line style="stroke:none;stroke-width:1.0;" x1="17" x2="409" y1="650.4844" y2="650.4844" />
-      <line style="stroke:none;stroke-width:1.0;" x1="17" x2="409" y1="666.7813" y2="666.7813" />
-      <line style="stroke:none;stroke-width:1.0;" x1="17" x2="409" y1="683.0781" y2="683.0781" />
-      <line style="stroke:none;stroke-width:1.0;" x1="17" x2="17" y1="585.2969" y2="683.0781" />
-      <line style="stroke:none;stroke-width:1.0;" x1="409" x2="409" y1="585.2969" y2="683.0781" />
+      <rect fill="none" height="16.2969" style="stroke:none;stroke-width:1.0;" width="377" x="158" y="439.2969" />
+      <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="59" x="158" y="452.292">Legend</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="217" y="452.292">&nbsp;</text>
+      <rect fill="none" height="16.2969" style="stroke:none;stroke-width:1.0;" width="377" x="158" y="455.5938" />
+      <text fill="#444444" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="162" y="468.5889">▯</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="170" y="468.5889">&nbsp;</text>
+      <text fill="#444444" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="178" y="468.5889">boundary</text>
+      <text fill="#444444" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="43" x="247" y="469.5322">(dashed)</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="290" y="468.5889">&nbsp;</text>
+      <rect fill="#1168BD" height="16.2969" style="stroke:none;stroke-width:1.0;" width="377" x="158" y="471.8906" />
+      <text fill="#0B4884" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="162" y="484.8857">▯</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="170" y="484.8857">&nbsp;</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="178" y="484.8857">Software System</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="114" x="297" y="485.8291">($lineStyle, thickness 1)</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="411" y="484.8857">&nbsp;</text>
+      <text fill="#707070" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="162" y="501.1826">─</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="170" y="501.1826">&nbsp;</text>
+      <text fill="#707070" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85" x="178" y="501.1826">Relationship</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="267" y="501.1826">&nbsp;</text>
+      <rect fill="#66622E" height="16.2969" style="stroke:none;stroke-width:1.0;" width="377" x="158" y="504.4844" />
+      <text fill="#CCCCCC" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="162" y="517.4795">▯</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="170" y="517.4795">&nbsp;</text>
+      <text fill="#CCCCCC" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="135" x="178" y="517.4795">Bacumen boundary</text>
+      <text fill="#CCCCCC" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="188" x="317" y="518.4229">(last back color, $lineStyle, thickness 1)</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="505" y="517.4795">&nbsp;</text>
+      <rect fill="#66622E" height="16.2969" style="stroke:none;stroke-width:1.0;" width="377" x="158" y="520.7813" />
+      <text fill="#CCCCCC" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="162" y="533.7764">▯</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="170" y="533.7764">&nbsp;</text>
+      <text fill="#CCCCCC" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="161" x="178" y="533.7764">EdgePlatform boundary</text>
+      <text fill="#CCCCCC" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="188" x="343" y="534.7197">(last back color, $lineStyle, thickness 1)</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="531" y="533.7764">&nbsp;</text>
+      <rect fill="#66622E" height="16.2969" style="stroke:none;stroke-width:1.0;" width="377" x="158" y="537.0781" />
+      <text fill="#CCCCCC" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="162" y="550.0732">▯</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="170" y="550.0732">&nbsp;</text>
+      <text fill="#CCCCCC" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="136" x="178" y="550.0732">Int2Fabric boundary</text>
+      <text fill="#CCCCCC" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="188" x="318" y="551.0166">(last back color, $lineStyle, thickness 1)</text>
+      <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="506" y="550.0732">&nbsp;</text>
+      <line style="stroke:none;stroke-width:1.0;" x1="158" x2="535" y1="439.2969" y2="439.2969" />
+      <line style="stroke:none;stroke-width:1.0;" x1="158" x2="535" y1="455.5938" y2="455.5938" />
+      <line style="stroke:none;stroke-width:1.0;" x1="158" x2="535" y1="471.8906" y2="471.8906" />
+      <line style="stroke:none;stroke-width:1.0;" x1="158" x2="535" y1="488.1875" y2="488.1875" />
+      <line style="stroke:none;stroke-width:1.0;" x1="158" x2="535" y1="504.4844" y2="504.4844" />
+      <line style="stroke:none;stroke-width:1.0;" x1="158" x2="535" y1="520.7813" y2="520.7813" />
+      <line style="stroke:none;stroke-width:1.0;" x1="158" x2="535" y1="537.0781" y2="537.0781" />
+      <line style="stroke:none;stroke-width:1.0;" x1="158" x2="535" y1="553.375" y2="553.375" />
+      <line style="stroke:none;stroke-width:1.0;" x1="158" x2="158" y1="439.2969" y2="553.375" />
+      <line style="stroke:none;stroke-width:1.0;" x1="535" x2="535" y1="439.2969" y2="553.375" />
      </g>
     </svg>
    </div>
@@ -225,163 +277,214 @@
     <div class="box">
      <div id="SystemContextForEdgeComputingPlatform-svg" class="modal-box-content">
       <!--?xml version="1.0" encoding="us-ascii" standalone="no"?-->
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" preserveAspectRatio="meet" version="1.1" viewBox="0 0 434 710" zoomAndPan="magnify">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" preserveAspectRatio="meet" version="1.1" viewBox="0 0 566 580" zoomAndPan="magnify">
        <defs /><g>
-        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="376" x="25" y="22.9951">Int2 Edge Computing Platform - System Context</text><!--cluster group_1-->
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="335" x="108.5" y="22.9951">Int2 Data Fabric Platform - System Context</text><!--cluster group_1-->
         <g id="cluster_group_1">
-         <rect fill="none" height="179" rx="2.5" ry="2.5" style="stroke:#CCCCCC;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="238" x="101.5" y="44.2969" />
-         <text fill="#CCCCCC" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="120" x="160.5" y="61.1484">Edge Solution</text>
+         <rect fill="none" height="177" rx="2.5" ry="2.5" style="stroke:#CCCCCC;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="273" x="7" y="51.2969" />
+         <text fill="#CCCCCC" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="81" x="103" y="68.1484">Bacumen</text>
         </g><!--cluster group_2-->
         <g id="cluster_group_2">
-         <rect fill="none" height="294" rx="2.5" ry="2.5" style="stroke:#CCCCCC;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="246" x="97.5" y="267.2969" />
-         <text fill="#CCCCCC" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="142" x="149.5" y="284.1484">Int2 Data Fabric</text>
-        </g><!--entity Int2EdgeComputingPlatform-->
-        <g id="elem_Int2EdgeComputingPlatform">
-         <a href="int2-edge-computing-platform/container/" target="_top" title="int2-edge-computing-platform/container/" xlink:actuate="onRequest" xlink:href="int2-edge-computing-platform/container/" xlink:show="new" xlink:title="int2-edge-computing-platform/container/" xlink:type="simple">
-          <rect fill="#1168BD" height="126.4375" rx="2.5" ry="2.5" style="stroke:#0B4884;stroke-width:1.0;" width="206" x="117.5" y="81.2969" />
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="36" x="127.5" y="106.1484">Int2</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="6" x="163.5" y="106.1484">&nbsp;</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="43" x="169.5" y="106.1484">Edge</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="6" x="212.5" y="106.1484">&nbsp;</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="95" x="218.5" y="106.1484">Computing</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="76" x="182.5" y="124.7734">Platform</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="218.5" y="141.542">&nbsp;</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="26" x="147.5" y="157.8389">Int2</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="173.5" y="157.8389">&nbsp;</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="36" x="177.5" y="157.8389">Edge</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="213.5" y="157.8389">&nbsp;</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76" x="217.5" y="157.8389">Computing</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="192.5" y="174.1357">Platform</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45" x="152" y="192.4326">Owner</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="82" x="206" y="192.4326">Intellectus</text>
-          <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="148" x2="293" y1="179.4375" y2="179.4375" />
-          <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="148" x2="293" y1="195.7344" y2="195.7344" />
-          <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="148" x2="148" y1="179.4375" y2="195.7344" />
-          <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="201" x2="201" y1="179.4375" y2="195.7344" />
-          <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="293" x2="293" y1="179.4375" y2="195.7344" />
+         <rect fill="none" height="163" rx="2.5" ry="2.5" style="stroke:#CCCCCC;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="273" x="7" y="252.2969" />
+         <text fill="#CCCCCC" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="119" x="84" y="269.1484">EdgePlatform</text>
+        </g><!--cluster group_3-->
+        <g id="cluster_group_3">
+         <rect fill="none" height="295" rx="2.5" ry="2.5" style="stroke:#CCCCCC;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="246" x="314" y="44.2969" />
+         <text fill="#CCCCCC" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="89" x="392.5" y="61.1484">Int2Fabric</text>
+        </g><!--entity Bacumen-->
+        <g id="elem_Bacumen">
+         <a href="bacumen/context/" target="_top" title="bacumen/context/" xlink:actuate="onRequest" xlink:href="bacumen/context/" xlink:show="new" xlink:title="bacumen/context/" xlink:type="simple">
+          <rect fill="#1168BD" height="124.1094" rx="2.5" ry="2.5" style="stroke:#0B4884;stroke-width:1.0;" width="241" x="23" y="88.2969" />
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="81" x="103" y="113.1484">Bacumen</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="141.5" y="129.917">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64" x="43.5" y="146.2139">Business</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="107.5" y="146.2139">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57" x="111.5" y="146.2139">Acumen</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="168.5" y="146.2139">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="172.5" y="146.2139">provides</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="231.5" y="146.2139">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="235.5" y="146.2139">a</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83" x="56" y="162.5107">visualization</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="139" y="162.5107">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="14" x="143" y="162.5107">to</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="157" y="162.5107">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="21" x="161" y="162.5107">act</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="182" y="162.5107">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="18" x="186" y="162.5107">for</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="204" y="162.5107">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="23" x="208" y="162.5107">the</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63" x="83" y="178.8076">business</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="146" y="178.8076">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54" x="150" y="178.8076">sucess.</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45" x="37" y="197.1045">Owner</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="158" x="91" y="197.1045">intellectus.software</text>
+          <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="33" x2="254" y1="184.1094" y2="184.1094" />
+          <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="33" x2="254" y1="200.4063" y2="200.4063" />
+          <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="33" x2="33" y1="184.1094" y2="200.4063" />
+          <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="86" x2="86" y1="184.1094" y2="200.4063" />
+          <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="254" x2="254" y1="184.1094" y2="200.4063" />
+         </a>
+        </g><!--entity EdgeComputingPlatform-->
+        <g id="elem_EdgeComputingPlatform">
+         <a href="edge-computing-platform/context/" target="_top" title="edge-computing-platform/context/" xlink:actuate="onRequest" xlink:href="edge-computing-platform/context/" xlink:show="new" xlink:title="edge-computing-platform/context/" xlink:type="simple">
+          <rect fill="#1168BD" height="110.1406" rx="2.5" ry="2.5" style="stroke:#0B4884;stroke-width:1.0;" width="241" x="23" y="289.2969" />
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="43" x="71.5" y="314.1484">Edge</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="6" x="114.5" y="314.1484">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="95" x="120.5" y="314.1484">Computing</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="76" x="105.5" y="332.7734">Platform</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="141.5" y="349.542">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="36" x="55.5" y="365.8389">Edge</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="91.5" y="365.8389">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76" x="95.5" y="365.8389">Computing</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="171.5" y="365.8389">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="175.5" y="365.8389">Platform</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45" x="37" y="384.1357">Owner</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="158" x="91" y="384.1357">intellectus.software</text>
+          <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="33" x2="254" y1="371.1406" y2="371.1406" />
+          <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="33" x2="254" y1="387.4375" y2="387.4375" />
+          <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="33" x2="33" y1="371.1406" y2="387.4375" />
+          <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="86" x2="86" y1="371.1406" y2="387.4375" />
+          <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="254" x2="254" y1="371.1406" y2="387.4375" />
          </a>
         </g><!--entity Int2DataFabricPlatform-->
         <g id="elem_Int2DataFabricPlatform">
-         <a href="int2-data-fabric-platform/context/" target="_top" title="int2-data-fabric-platform/context/" xlink:actuate="onRequest" xlink:href="int2-data-fabric-platform/context/" xlink:show="new" xlink:title="int2-data-fabric-platform/context/" xlink:type="simple">
-          <rect fill="#1168BD" height="240.5156" rx="2.5" ry="2.5" style="stroke:#0B4884;stroke-width:1.0;" width="214" x="113.5" y="304.2969" />
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="36" x="149.5" y="329.1484">Int2</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="6" x="185.5" y="329.1484">&nbsp;</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="41" x="191.5" y="329.1484">Data</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="6" x="232.5" y="329.1484">&nbsp;</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="53" x="238.5" y="329.1484">Fabric</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="76" x="182.5" y="347.7734">Platform</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="218.5" y="364.542">&nbsp;</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89" x="148" y="380.8389">Autonomous</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="237" y="380.8389">&nbsp;</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52" x="241" y="380.8389">Bigdata</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="130" y="397.1357">Platform</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="186" y="397.1357">&nbsp;</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="25" x="190" y="397.1357">has</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="215" y="397.1357">&nbsp;</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="36" x="219" y="397.1357">been</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="255" y="397.1357">&nbsp;</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52" x="259" y="397.1357">powerd</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="16" x="133" y="413.4326">by</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="149" y="413.4326">&nbsp;</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="74" x="153" y="413.4326">Intellectu's</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="227" y="413.4326">&nbsp;</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="32" x="231" y="413.4326">Data</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="263" y="413.4326">&nbsp;</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41" x="267" y="413.4326">Fabric</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="125.5" y="429.7295">Platform</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="181.5" y="429.7295">&nbsp;</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40" x="185.5" y="429.7295">which</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="225.5" y="429.7295">&nbsp;</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="229.5" y="429.7295">contains</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="288.5" y="429.7295">&nbsp;</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="23" x="292.5" y="429.7295">the</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="30" x="148" y="446.0264">data</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="178" y="446.0264">&nbsp;</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="93" x="182" y="446.0264">virtualizations</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="275" y="446.0264">&nbsp;</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="14" x="279" y="446.0264">to</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="147" y="462.3232">manage</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="203" y="462.3232">&nbsp;</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="30" x="207" y="462.3232">data</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="237" y="462.3232">&nbsp;</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="26" x="241" y="462.3232">and</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="267" y="462.3232">&nbsp;</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="23" x="271" y="462.3232">the</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63" x="123.5" y="478.6201">semantic</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="186.5" y="478.6201">&nbsp;</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47" x="190.5" y="478.6201">search</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="237.5" y="478.6201">&nbsp;</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="14" x="241.5" y="478.6201">to</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="255.5" y="478.6201">&nbsp;</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="58" x="259.5" y="478.6201">discover</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="26" x="135" y="494.917">and</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="161" y="494.917">&nbsp;</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="23" x="165" y="494.917">the</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="188" y="494.917">&nbsp;</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="30" x="192" y="494.917">data</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="222" y="494.917">&nbsp;</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62" x="226" y="494.917">pipelines</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="288" y="494.917">&nbsp;</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="14" x="292" y="494.917">to</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="38" x="124" y="511.2139">make</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="162" y="511.2139">&nbsp;</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="166" y="511.2139">automated</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="241" y="511.2139">&nbsp;</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="72" x="245" y="511.2139">workflows.</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45" x="152" y="529.5107">Owner</text>
-          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="82" x="206" y="529.5107">Intellectus</text>
-          <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="148" x2="293" y1="516.5156" y2="516.5156" />
-          <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="148" x2="293" y1="532.8125" y2="532.8125" />
-          <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="148" x2="148" y1="516.5156" y2="532.8125" />
-          <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="201" x2="201" y1="516.5156" y2="532.8125" />
-          <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="293" x2="293" y1="516.5156" y2="532.8125" />
+         <a href="int2-data-fabric-platform/container/" target="_top" title="int2-data-fabric-platform/container/" xlink:actuate="onRequest" xlink:href="int2-data-fabric-platform/container/" xlink:show="new" xlink:title="int2-data-fabric-platform/container/" xlink:type="simple">
+          <rect fill="#1168BD" height="240.5156" rx="2.5" ry="2.5" style="stroke:#0B4884;stroke-width:1.0;" width="214" x="330" y="81.7969" />
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="36" x="366" y="106.6484">Int2</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="6" x="402" y="106.6484">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="41" x="408" y="106.6484">Data</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="6" x="449" y="106.6484">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="53" x="455" y="106.6484">Fabric</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="76" x="399" y="125.2734">Platform</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="435" y="142.042">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89" x="364.5" y="158.3389">Autonomous</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="453.5" y="158.3389">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52" x="457.5" y="158.3389">Bigdata</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="346.5" y="174.6357">Platform</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="402.5" y="174.6357">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="25" x="406.5" y="174.6357">has</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="431.5" y="174.6357">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="36" x="435.5" y="174.6357">been</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="471.5" y="174.6357">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52" x="475.5" y="174.6357">powerd</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="16" x="349.5" y="190.9326">by</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="365.5" y="190.9326">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="74" x="369.5" y="190.9326">Intellectu's</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="443.5" y="190.9326">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="32" x="447.5" y="190.9326">Data</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="479.5" y="190.9326">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41" x="483.5" y="190.9326">Fabric</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="342" y="207.2295">Platform</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="398" y="207.2295">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40" x="402" y="207.2295">which</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="442" y="207.2295">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="446" y="207.2295">contains</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="505" y="207.2295">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="23" x="509" y="207.2295">the</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="30" x="364.5" y="223.5264">data</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="394.5" y="223.5264">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="93" x="398.5" y="223.5264">virtualizations</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="491.5" y="223.5264">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="14" x="495.5" y="223.5264">to</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="363.5" y="239.8232">manage</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="419.5" y="239.8232">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="30" x="423.5" y="239.8232">data</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="453.5" y="239.8232">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="26" x="457.5" y="239.8232">and</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="483.5" y="239.8232">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="23" x="487.5" y="239.8232">the</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63" x="340" y="256.1201">semantic</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="403" y="256.1201">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47" x="407" y="256.1201">search</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="454" y="256.1201">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="14" x="458" y="256.1201">to</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="472" y="256.1201">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="58" x="476" y="256.1201">discover</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="26" x="351.5" y="272.417">and</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="377.5" y="272.417">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="23" x="381.5" y="272.417">the</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="404.5" y="272.417">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="30" x="408.5" y="272.417">data</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="438.5" y="272.417">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62" x="442.5" y="272.417">pipelines</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="504.5" y="272.417">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="14" x="508.5" y="272.417">to</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="38" x="340.5" y="288.7139">make</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="378.5" y="288.7139">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="382.5" y="288.7139">automated</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="457.5" y="288.7139">&nbsp;</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="72" x="461.5" y="288.7139">workflows.</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45" x="368.5" y="307.0107">Owner</text>
+          <text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="82" x="422.5" y="307.0107">Intellectus</text>
+          <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="364.5" x2="509.5" y1="294.0156" y2="294.0156" />
+          <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="364.5" x2="509.5" y1="310.3125" y2="310.3125" />
+          <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="364.5" x2="364.5" y1="294.0156" y2="310.3125" />
+          <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="417.5" x2="417.5" y1="294.0156" y2="310.3125" />
+          <line style="stroke:#FFFFFF;stroke-width:1.0;" x1="509.5" x2="509.5" y1="294.0156" y2="310.3125" />
          </a>
-        </g><!--link Int2EdgeComputingPlatform to Int2DataFabricPlatform-->
-        <g id="link_Int2EdgeComputingPlatform_Int2DataFabricPlatform">
-         <path d="M220.5,207.4469 C220.5,235.9869 220.5,262.8269 220.5,296.1469 " fill="none" id="Int2EdgeComputingPlatform-to-Int2DataFabricPlatform" style="stroke:#707070;stroke-width:1.0;" />
-         <polygon fill="#707070" points="220.5,304.1469,223.5,296.1469,217.5,296.1469,220.5,304.1469" style="stroke:#707070;stroke-width:1.0;" />
-         <text fill="#707070" font-family="sans-serif" font-size="0" lengthAdjust="spacing" textLength="0" x="221.5" y="240.2969">.</text>
+        </g><!--link Bacumen to Int2DataFabricPlatform-->
+        <g id="link_Bacumen_Int2DataFabricPlatform">
+         <path d="M264.33,171.6769 C286,175.5369 300.5843,178.1422 321.8343,181.9322 " fill="none" id="Bacumen-to-Int2DataFabricPlatform" style="stroke:#707070;stroke-width:1.0;" />
+         <polygon fill="#707070" points="329.71,183.3369,322.361,178.9788,321.3075,184.8856,329.71,183.3369" style="stroke:#707070;stroke-width:1.0;" />
+         <text fill="#707070" font-family="sans-serif" font-size="0" lengthAdjust="spacing" textLength="0" x="297" y="167.2969">.</text>
+        </g><!--link Int2DataFabricPlatform to Bacumen-->
+        <g id="link_Int2DataFabricPlatform_Bacumen">
+         <path d="M329.82,202.3769 C318.36,201.4569 306.91,200.1469 296,198.2969 C285.53,196.5269 282.5424,196.132 271.8324,193.462 " fill="none" id="Int2DataFabricPlatform-to-Bacumen" style="stroke:#707070;stroke-width:1.0;" />
+         <polygon fill="#707070" points="264.07,191.5269,271.1067,196.3729,272.5581,190.5511,264.07,191.5269" style="stroke:#707070;stroke-width:1.0;" />
+         <text fill="#707070" font-family="sans-serif" font-size="0" lengthAdjust="spacing" textLength="0" x="297" y="187.2969">.</text>
+        </g><!--link EdgeComputingPlatform to Int2DataFabricPlatform-->
+        <g id="link_EdgeComputingPlatform_Int2DataFabricPlatform">
+         <path d="M257.62,289.1969 C281.3,277.6569 299.0075,269.0295 322.4375,257.6195 " fill="none" id="EdgeComputingPlatform-to-Int2DataFabricPlatform" style="stroke:#707070;stroke-width:1.0;" />
+         <polygon fill="#707070" points="329.63,254.1169,321.124,254.9223,323.751,260.3167,329.63,254.1169" style="stroke:#707070;stroke-width:1.0;" />
+         <text fill="#707070" font-family="sans-serif" font-size="0" lengthAdjust="spacing" textLength="0" x="297" y="259.2969">.</text>
         </g>
-        <rect fill="none" height="16.2969" style="stroke:none;stroke-width:1.0;" width="392" x="17" y="585.2969" />
-        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="59" x="17" y="598.292">Legend</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="76" y="598.292">&nbsp;</text>
-        <rect fill="none" height="16.2969" style="stroke:none;stroke-width:1.0;" width="392" x="17" y="601.5938" />
-        <text fill="#444444" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="21" y="614.5889">▯</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="29" y="614.5889">&nbsp;</text>
-        <text fill="#444444" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="37" y="614.5889">boundary</text>
-        <text fill="#444444" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="43" x="106" y="615.5322">(dashed)</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="149" y="614.5889">&nbsp;</text>
-        <rect fill="#1168BD" height="16.2969" style="stroke:none;stroke-width:1.0;" width="392" x="17" y="617.8906" />
-        <text fill="#0B4884" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="21" y="630.8857">▯</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="29" y="630.8857">&nbsp;</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="37" y="630.8857">Software System</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="114" x="156" y="631.8291">($lineStyle, thickness 1)</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="270" y="630.8857">&nbsp;</text>
-        <text fill="#707070" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="21" y="647.1826">─</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="29" y="647.1826">&nbsp;</text>
-        <text fill="#707070" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85" x="37" y="647.1826">Relationship</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="126" y="647.1826">&nbsp;</text>
-        <rect fill="#66622E" height="16.2969" style="stroke:none;stroke-width:1.0;" width="392" x="17" y="650.4844" />
-        <text fill="#CCCCCC" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="21" y="663.4795">▯</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="29" y="663.4795">&nbsp;</text>
-        <text fill="#CCCCCC" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="165" x="37" y="663.4795">Edge Solution boundary</text>
-        <text fill="#CCCCCC" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="188" x="206" y="664.4229">(last back color, $lineStyle, thickness 1)</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="394" y="663.4795">&nbsp;</text>
-        <rect fill="#66622E" height="16.2969" style="stroke:none;stroke-width:1.0;" width="392" x="17" y="666.7813" />
-        <text fill="#CCCCCC" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="21" y="679.7764">▯</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="29" y="679.7764">&nbsp;</text>
-        <text fill="#CCCCCC" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="176" x="37" y="679.7764">Int2 Data Fabric boundary</text>
-        <text fill="#CCCCCC" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="188" x="217" y="680.7197">(last back color, $lineStyle, thickness 1)</text>
-        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="405" y="679.7764">&nbsp;</text>
-        <line style="stroke:none;stroke-width:1.0;" x1="17" x2="409" y1="585.2969" y2="585.2969" />
-        <line style="stroke:none;stroke-width:1.0;" x1="17" x2="409" y1="601.5938" y2="601.5938" />
-        <line style="stroke:none;stroke-width:1.0;" x1="17" x2="409" y1="617.8906" y2="617.8906" />
-        <line style="stroke:none;stroke-width:1.0;" x1="17" x2="409" y1="634.1875" y2="634.1875" />
-        <line style="stroke:none;stroke-width:1.0;" x1="17" x2="409" y1="650.4844" y2="650.4844" />
-        <line style="stroke:none;stroke-width:1.0;" x1="17" x2="409" y1="666.7813" y2="666.7813" />
-        <line style="stroke:none;stroke-width:1.0;" x1="17" x2="409" y1="683.0781" y2="683.0781" />
-        <line style="stroke:none;stroke-width:1.0;" x1="17" x2="17" y1="585.2969" y2="683.0781" />
-        <line style="stroke:none;stroke-width:1.0;" x1="409" x2="409" y1="585.2969" y2="683.0781" />
+        <rect fill="none" height="16.2969" style="stroke:none;stroke-width:1.0;" width="377" x="158" y="439.2969" />
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="59" x="158" y="452.292">Legend</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="217" y="452.292">&nbsp;</text>
+        <rect fill="none" height="16.2969" style="stroke:none;stroke-width:1.0;" width="377" x="158" y="455.5938" />
+        <text fill="#444444" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="162" y="468.5889">▯</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="170" y="468.5889">&nbsp;</text>
+        <text fill="#444444" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="178" y="468.5889">boundary</text>
+        <text fill="#444444" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="43" x="247" y="469.5322">(dashed)</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="290" y="468.5889">&nbsp;</text>
+        <rect fill="#1168BD" height="16.2969" style="stroke:none;stroke-width:1.0;" width="377" x="158" y="471.8906" />
+        <text fill="#0B4884" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="162" y="484.8857">▯</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="170" y="484.8857">&nbsp;</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="178" y="484.8857">Software System</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="114" x="297" y="485.8291">($lineStyle, thickness 1)</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="411" y="484.8857">&nbsp;</text>
+        <text fill="#707070" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="162" y="501.1826">─</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="170" y="501.1826">&nbsp;</text>
+        <text fill="#707070" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85" x="178" y="501.1826">Relationship</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="267" y="501.1826">&nbsp;</text>
+        <rect fill="#66622E" height="16.2969" style="stroke:none;stroke-width:1.0;" width="377" x="158" y="504.4844" />
+        <text fill="#CCCCCC" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="162" y="517.4795">▯</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="170" y="517.4795">&nbsp;</text>
+        <text fill="#CCCCCC" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="135" x="178" y="517.4795">Bacumen boundary</text>
+        <text fill="#CCCCCC" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="188" x="317" y="518.4229">(last back color, $lineStyle, thickness 1)</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="505" y="517.4795">&nbsp;</text>
+        <rect fill="#66622E" height="16.2969" style="stroke:none;stroke-width:1.0;" width="377" x="158" y="520.7813" />
+        <text fill="#CCCCCC" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="162" y="533.7764">▯</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="170" y="533.7764">&nbsp;</text>
+        <text fill="#CCCCCC" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="161" x="178" y="533.7764">EdgePlatform boundary</text>
+        <text fill="#CCCCCC" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="188" x="343" y="534.7197">(last back color, $lineStyle, thickness 1)</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="531" y="533.7764">&nbsp;</text>
+        <rect fill="#66622E" height="16.2969" style="stroke:none;stroke-width:1.0;" width="377" x="158" y="537.0781" />
+        <text fill="#CCCCCC" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="162" y="550.0732">▯</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="170" y="550.0732">&nbsp;</text>
+        <text fill="#CCCCCC" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="136" x="178" y="550.0732">Int2Fabric boundary</text>
+        <text fill="#CCCCCC" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="188" x="318" y="551.0166">(last back color, $lineStyle, thickness 1)</text>
+        <text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="506" y="550.0732">&nbsp;</text>
+        <line style="stroke:none;stroke-width:1.0;" x1="158" x2="535" y1="439.2969" y2="439.2969" />
+        <line style="stroke:none;stroke-width:1.0;" x1="158" x2="535" y1="455.5938" y2="455.5938" />
+        <line style="stroke:none;stroke-width:1.0;" x1="158" x2="535" y1="471.8906" y2="471.8906" />
+        <line style="stroke:none;stroke-width:1.0;" x1="158" x2="535" y1="488.1875" y2="488.1875" />
+        <line style="stroke:none;stroke-width:1.0;" x1="158" x2="535" y1="504.4844" y2="504.4844" />
+        <line style="stroke:none;stroke-width:1.0;" x1="158" x2="535" y1="520.7813" y2="520.7813" />
+        <line style="stroke:none;stroke-width:1.0;" x1="158" x2="535" y1="537.0781" y2="537.0781" />
+        <line style="stroke:none;stroke-width:1.0;" x1="158" x2="535" y1="553.375" y2="553.375" />
+        <line style="stroke:none;stroke-width:1.0;" x1="158" x2="158" y1="439.2969" y2="553.375" />
+        <line style="stroke:none;stroke-width:1.0;" x1="535" x2="535" y1="439.2969" y2="553.375" />
        </g>
       </svg>
      </div>
@@ -391,7 +494,11 @@
     </div>
    </div><button class="modal-close is-large" aria-label="close" onclick="closeModal('SystemContextForEdgeComputingPlatform-modal')"></button>
   </div>
- </div></p></div>
+ </div></p>
+<h3>비즈니스 솔루션 시나리오</h3>
+<ol>
+ <li>Smart HACCP: 식품 제조 공정 모니터링을 통해 제품 품질을 관리할 수 있는 통합 솔루션 입니다.</li>
+</ol></div>
         </div>
       </div>
     </div>
