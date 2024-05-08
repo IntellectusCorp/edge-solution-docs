@@ -26,6 +26,6 @@ ghcr.io/avisi-cloud/structurizr-site-generatr serve -w workspace.dsl --assets-di
 > ghcr.io/avisi-cloud/structurizr-site-generatr serve -w workspace.dsl --assets-dir docs/assets
 > ```
 
-[dsl reference document](https://github.com/structurizr/dsl/blob/master/docs/language-reference.md) 에서 workspace.dsl 문서의 사용법을 확인할 수 있습니다.
+[dsl reference document](https://docs.structurizr.com/dsl/language) 에서 workspace.dsl 문서의 사용법을 확인할 수 있습니다.
 
 
