@@ -49,7 +49,6 @@ Boundary(group_5, "Stakeholders", $tags="Stakeholders") {
 }
 
 
-Rel(TrafficControlInformation, Int2DataFabricPlatform, "publish traffic information", $techn="", $tags="Relationship", $link="")
 Rel(Int2EdgeComputingPlatform, Int2DataFabricPlatform, "", $techn="", $tags="Relationship", $link="")
 Rel(Int2DataFabricPlatform, HyconDataPlatform, "", $techn="", $tags="Relationship", $link="")
 Rel(DataConsumer, Int2DataFabricPlatform, "", $techn="", $tags="Relationship", $link="")

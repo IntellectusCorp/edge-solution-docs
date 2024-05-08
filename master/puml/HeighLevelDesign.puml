@@ -37,24 +37,24 @@ Deployment_Node(Integration.IntellectusDataFabric, "Intellectus Data Fabric", $t
 
   Container(Integration.IntellectusDataFabric.DataSourceGateway_1, "Data Source Gateway", $techn="Container: Java Application", $descr="Manage data pipeline between distburited data source and Data Fabric in secure.", $tags="Container", $link="")
   Deployment_Node(Integration.IntellectusDataFabric.MetadataService, "Metadata Service", $type="", $descr="", $tags="Element", $link="") {
-    ContainerDb(Integration.IntellectusDataFabric.MetadataService.MetadataDatabase_1, "Metadata Database", $techn="", $descr="DB: AWS Aurora Postgrsql", $tags="Container,Database", $link="")
     Container(Integration.IntellectusDataFabric.MetadataService.MetadataApp_1, "Metadata App", $techn="", $descr="Active Metadata", $tags="Container", $link="")
+    ContainerDb(Integration.IntellectusDataFabric.MetadataService.MetadataDatabase_1, "Metadata Database", $techn="", $descr="DB: AWS Aurora Postgrsql", $tags="Container,Database", $link="")
   }
 
 }
 
-Rel(Integration.IntellectusDataFabric.MetadataService.MetadataApp_1, Integration.IntellectusDataFabric.MetadataService.MetadataDatabase_1, "", $techn="", $tags="Relationship", $link="")
 Rel(Integration.IntellectusDataFabric.KnowledgeService.KnowledgeGraphApp_1, Integration.IntellectusDataFabric.MetadataService.MetadataApp_1, "", $techn="", $tags="Relationship", $link="")
 Rel(Integration.IntellectusDataFabric.KnowledgeService.KnowledgeGraphApp_1, Integration.IntellectusDataFabric.KnowledgeService.KnowledgeGraphDatabase_1, "build Local Knowledge Graph", $techn="", $tags="Relationship", $link="")
-Rel(Integration.IntellectusDataFabric.APIGatewayService.APIService_1, Integration.IntellectusDataFabric.KnowledgeService.KnowledgeGraphApp_1, "", $techn="", $tags="Relationship", $link="")
 Rel(Integration.IntellectusDataFabric.APIGatewayService.APIService_1, Integration.IntellectusDataFabric.MetadataService.MetadataApp_1, "", $techn="", $tags="Relationship", $link="")
+Rel(Integration.IntellectusDataFabric.APIGatewayService.APIService_1, Integration.IntellectusDataFabric.KnowledgeService.KnowledgeGraphApp_1, "", $techn="", $tags="Relationship", $link="")
 Rel(Integration.HyconDataPipeline.MetadataExtraction_1, Integration.HyconDataPipeline.AutonomousDataStore_1, "Extract metadata(by file)", $techn="", $tags="Relationship", $link="")
 Rel(Integration.HyconDataPipeline.MetadataExtraction_1, Integration.HyconDataPipeline.Anontmization_1, "Anonymization", $techn="", $tags="Relationship", $link="")
-Rel(Integration.HyconDataPipeline.Anontmization_1, Integration.HyconDataPipeline.Visualization_1, "Processing for Visualization", $techn="", $tags="Relationship", $link="")
 Rel(Integration.HyconDataPipeline.Visualization_1, Integration.HyconDataPipeline.MetadataStore_1, "Load Data", $techn="", $tags="Relationship", $link="")
+Rel(Integration.HyconDataPipeline.Anontmization_1, Integration.HyconDataPipeline.Visualization_1, "Processing for Visualization", $techn="", $tags="Relationship", $link="")
 Rel(Integration.IntellectusDataFabric.DataSourceGateway_1, Integration.HyconDataPipeline.AutonomousDataStore_1, "", $techn="", $tags="Relationship", $link="")
 Rel(Integration.IntellectusDataFabric.DataSourceGateway_1, Integration.HyconDataPipeline.MetadataStore_1, "", $techn="", $tags="Relationship", $link="")
 Rel(Integration.IntellectusDataFabric.MetadataService.MetadataApp_1, Integration.IntellectusDataFabric.DataSourceGateway_1, "", $techn="", $tags="Relationship", $link="")
+Rel(Integration.IntellectusDataFabric.MetadataService.MetadataApp_1, Integration.IntellectusDataFabric.MetadataService.MetadataDatabase_1, "", $techn="", $tags="Relationship", $link="")
 
 SHOW_LEGEND(true)
 @enduml

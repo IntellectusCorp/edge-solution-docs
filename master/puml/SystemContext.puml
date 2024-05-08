@@ -19,7 +19,6 @@ Boundary(group_1, "Distributed Datasets", $tags="Distributed Datasets") {
   Person(DataLake, "Data Lake", $descr="Unstructured or semi-structured dataset", $tags="Element", $link="")
   Person(DataWarehouse, "Data Warehouse", $descr="Structured dataset.", $tags="Element", $link="")
   Person(Vehicles, "Vehicles", $descr="Publish and subscribe data in near real time", $tags="Element", $link="")
-  Person(TrafficControlInformation, "Traffic Control Information", $descr="Publish traffic information", $tags="Element", $link="")
     AddBoundaryTag("Distributed Datasets/3rd Party Data Platform", $borderColor="#cccccc", $fontColor="#cccccc", $borderStyle="Dashed", $borderThickness="1")
     Boundary(group_2, "3rd Party Data Platform", $tags="Distributed Datasets/3rd Party Data Platform") {
       WithoutPropertyHeader()
@@ -49,7 +48,6 @@ Boundary(group_5, "Stakeholders", $tags="Stakeholders") {
 }
 
 
-Rel(TrafficControlInformation, Int2DataFabricPlatform, "publish traffic information", $techn="", $tags="Relationship", $link="")
 Rel(Int2EdgeComputingPlatform, Int2DataFabricPlatform, "", $techn="", $tags="Relationship", $link="")
 Rel(Int2DataFabricPlatform, HyconDataPlatform, "", $techn="", $tags="Relationship", $link="")
 Rel(DataConsumer, Int2DataFabricPlatform, "", $techn="", $tags="Relationship", $link="")

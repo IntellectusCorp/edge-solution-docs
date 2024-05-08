@@ -24,7 +24,6 @@ Person(ERP, "ERP", $descr="Traditional type of dataset in enterprise grade.", $t
 Person(DataLake, "Data Lake", $descr="Unstructured or semi-structured dataset", $tags="Element", $link="")
 Person(DataWarehouse, "Data Warehouse", $descr="Structured dataset.", $tags="Element", $link="")
 Person(Vehicles, "Vehicles", $descr="Publish and subscribe data in near real time", $tags="Element", $link="")
-Person(TrafficControlInformation, "Traffic Control Information", $descr="Publish traffic information", $tags="Element", $link="")
 WithoutPropertyHeader()
 AddProperty("Owner","Hyconsoft")
 System(HyconDataPlatform, "Hycon Data Platform", $descr="An autonomous driving dataset generated from scenarios provided by the consortium.", $tags="Software System,Hycon", $link="")
@@ -45,6 +44,7 @@ System_Boundary("Int2DataFabricPlatform_boundary", "Int2 Data Fabric Platform", 
         Container(Int2DataFabricPlatform.StreamPipelineBackend, "Stream Pipeline Backend", $techn="Container: Zenoh Backend S3", $descr="Subscribe data to store", $tags="Container", $link="")
         Container(Int2DataFabricPlatform.StreamPipelineRouter, "Stream Pipeline Router", $techn="Container: Zenoh Router", $descr="Router", $tags="Container", $link="")
         ContainerDb(Int2DataFabricPlatform.StreamPipelineStorage, "Stream Pipeline Storage", $techn="AWS S3", $descr="Raw data storage", $tags="Container,Database", $link="")
+        Container(Int2DataFabricPlatform.DataSourceGateway, "Data Source Gateway", $techn="Container: Java Application", $descr="Manage data pipeline between distburited data source and Data Fabric in secure.", $tags="Container", $link="")
       }
 
       AddBoundaryTag("Backend Services/Knowledge Service", $borderColor="#cccccc", $fontColor="#cccccc", $borderStyle="Dashed", $borderThickness="1")
@@ -66,12 +66,10 @@ System_Boundary("Int2DataFabricPlatform_boundary", "Int2 Data Fabric Platform", 
     Container(Int2DataFabricPlatform.WebApplication, "Web Application", $techn="", $descr="Serverless nextjs", $tags="Container,Web Browser", $link="")
   }
 
-  Container(Int2DataFabricPlatform.DataSourceGateway, "Data Source Gateway", $techn="Container: Java Application", $descr="Manage data pipeline between distburited data source and Data Fabric in secure.", $tags="Container", $link="")
 }
 
 Rel(Int2DataFabricPlatform.StreamPipelineBackend, Int2DataFabricPlatform.StreamPipelineRouter, "subscribe data to store", $techn="", $tags="Relationship", $link="")
 Rel(Int2DataFabricPlatform.StreamPipelineBackend, Int2DataFabricPlatform.StreamPipelineStorage, "", $techn="", $tags="Relationship", $link="")
-Rel(TrafficControlInformation, Int2DataFabricPlatform.StreamPipelineRouter, "publish traffic information", $techn="", $tags="Relationship", $link="")
 Rel(Int2EdgeComputingPlatform, Int2DataFabricPlatform.StreamPipelineBackend, "", $techn="", $tags="Relationship", $link="")
 Rel(Int2DataFabricPlatform.DataSourceGateway, HyconDataPlatform, "", $techn="", $tags="Relationship", $link="")
 Rel(DataConsumer, Int2DataFabricPlatform.APIService, "", $techn="", $tags="Relationship", $link="")
