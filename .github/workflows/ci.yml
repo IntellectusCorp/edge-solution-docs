@@ -26,10 +26,11 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           persist-credentials: false
           fetch-depth: 0
+          submodules: 'true'
       # - uses: actions/setup-java@v3
       #   with:
       #     distribution: temurin
@@ -48,9 +49,9 @@ jobs:
           
       - name: Build site
         run: >
-          docker run --user root -t --rm -v ${{ github.workspace }}:/var/model
+          docker run --user root -t --rm -v ${{ github.workspace }}/workspace:/var/model
           ghcr.io/avisi-cloud/structurizr-site-generatr generate-site
-          --workspace-file workspace/workspace.dsl --assets-dir workspace/docs/assets
+          --workspace-file workspace.dsl --assets-dir docs/assets
         shell: bash
           
       - name: Publish site
@@ -58,4 +59,4 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: build/site        
+          FOLDER: workspace/build/site
