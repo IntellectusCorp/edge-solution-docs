@@ -21,10 +21,9 @@ workspace "Int2 Solution Documents"  {
         }
 
         # relations Bacumen <> Int2Fabric
-        bacumenVisualizationPanel -> streamPipelineStorage
+        bacumenVisualizationPanel -> streamDatabase
 
         #temp
-        streamPipelineBackend -> fabricApiProvider
 
         group "EdgePlatform" {
 
@@ -48,7 +47,8 @@ workspace "Int2 Solution Documents"  {
             }
 
             # relations to/from Edge Solution
-            fabricDatapipelineAgent -> streamPipelineBackend
+            fabricDatapipelineAgent -> streamApi
+            edgeHub -> streamRouter
 
         } 
 
@@ -119,19 +119,26 @@ workspace "Int2 Solution Documents"  {
 
         
         dynamic bacumen "BacumenDatasourceConnect" "Bacumen에서 대시보드에 표시할 데이터소스 연동" {
-            edgeHub -> streamPipelineBackend "Data Ingestion"
-            streamPipelineBackend -> streamPipelineStorage "store"
+            edgeHub -> streamApi "Data Ingestion"
+            streamApi -> streamObjectStorage "store"
             bacumenApi -> fabricApiProvider "Request to access to specific dataource"
-            bacumenVisualizationPanel -> streamPipelineStorage "connect"
+            bacumenVisualizationPanel -> streamDatabase "connect"
         }
 
         dynamic bacumen "BacumenPubMessageToEdge" "Bacumen에서 Edge에 메시지 전송" {
             bacumenApi -> fabricApiProvider "Regist Webhook url on subscription topic"
-            edgeHub -> streamPipelineBackend "Publish message"
-            streamPipelineBackend -> fabricApiProvider "notify"
+            edgeHub -> streamApi "Publish message"
+            streamApi -> fabricApiProvider "notify"
             fabricApiProvider -> bacumenApi "Call webhook with message payload"
 
             autoLayout lr
+        }
+
+        dynamic dataFabric "StreamDataIngestion" "Edge에서 Int2 Fabric 으로 데이터 수집" {
+            edgeHub -> streamRouter "publish messages"
+            streamClient -> streamRouter "subscribe"
+            streamClient -> streamDatabase "store"
+
         }
 
         styles {
