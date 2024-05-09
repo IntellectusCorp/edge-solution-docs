@@ -16,8 +16,8 @@ AddRelTag("Relationship", $textColor="#707070", $lineColor="#707070", $lineStyle
 AddBoundaryTag("Software System", $bgColor="#ffffff", $borderColor="#0b4884", $fontColor="#0b4884", $shadowing="", $borderStyle="Solid", $borderThickness="1")
 
 WithoutPropertyHeader()
-AddProperty("Owner","Intellectus")
-System(Int2DataFabricPlatform, "Int2 Data Fabric Platform", $descr="Autonomous Bigdata Platform has been powerd by Intellectu's Data Fabric Platform which contains the data virtualizations to manage data and the semantic search to discover and the data pipelines to make automated workflows.", $tags="Software System", $link="")
+AddProperty("Owner","intellectus.software")
+System(Int2Fabric, "Int2 Fabric", $descr="Autonomous Bigdata Platform has been powerd by Intellectu's Data Fabric Platform which contains the data virtualizations to manage data and the semantic search to discover and the data pipelines to make automated workflows.", $tags="Software System", $link="")
 
 System_Boundary("Bacumen_boundary", "Bacumen", $tags="Software System") {
   AddBoundaryTag("API", $borderColor="#cccccc", $fontColor="#cccccc", $borderStyle="Dashed", $borderThickness="1")
@@ -32,8 +32,8 @@ System_Boundary("Bacumen_boundary", "Bacumen", $tags="Software System") {
 
 }
 
-Rel(Bacumen.VisualizationPanel, Int2DataFabricPlatform, "", $techn="", $tags="Relationship", $link="")
-Rel(Int2DataFabricPlatform, Bacumen.APIService, "", $techn="", $tags="Relationship", $link="")
+Rel(Bacumen.VisualizationPanel, Int2Fabric, "", $techn="", $tags="Relationship", $link="")
+Rel(Int2Fabric, Bacumen.APIService, "", $techn="", $tags="Relationship", $link="")
 
 SHOW_LEGEND(true)
 @enduml

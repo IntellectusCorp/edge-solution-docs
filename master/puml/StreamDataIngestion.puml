@@ -1,0 +1,41 @@
+@startuml
+set separator none
+title Int2 Fabric - Dynamic
+
+top to bottom direction
+
+!include <C4/C4>
+!include <C4/C4_Context>
+!include <C4/C4_Container>
+
+AddElementTag("Container,Database", $bgColor="#438dd5", $borderColor="#2e6295", $fontColor="#ffffff", $sprite="", $shadowing="", $borderStyle="Solid", $borderThickness="1")
+AddElementTag("Container", $bgColor="#438dd5", $borderColor="#2e6295", $fontColor="#ffffff", $sprite="", $shadowing="", $borderStyle="Solid", $borderThickness="1")
+
+AddRelTag("Relationship", $textColor="#707070", $lineColor="#707070", $lineStyle = "")
+
+AddBoundaryTag("Software System", $bgColor="#ffffff", $borderColor="#0b4884", $fontColor="#0b4884", $shadowing="", $borderStyle="Solid", $borderThickness="1")
+
+System_Boundary("EdgeComputingPlatform_boundary", "Edge Computing Platform", $tags="Software System") {
+  Container(EdgeComputingPlatform.HubDevice, "Hub Device", $techn="", $descr="Edge Hub to integrate and orchastrate data from the sensor network.", $tags="Container", $link="")
+}
+
+System_Boundary("Int2Fabric_boundary", "Int2 Fabric", $tags="Software System") {
+  AddBoundaryTag("Backend Services", $borderColor="#cccccc", $fontColor="#cccccc", $borderStyle="Dashed", $borderThickness="1")
+  Boundary(group_1, "Backend Services", $tags="Backend Services") {
+      AddBoundaryTag("Backend Services/DataPipelineService", $borderColor="#cccccc", $fontColor="#cccccc", $borderStyle="Dashed", $borderThickness="1")
+      Boundary(group_2, "DataPipelineService", $tags="Backend Services/DataPipelineService") {
+        Container(Int2Fabric.StreamRouter, "Stream Router", $techn="Container: Zenoh Router", $descr="Router", $tags="Container", $link="")
+        ContainerDb(Int2Fabric.StreamDatabase, "Stream Database", $techn="InfluxDB(Amazon Timestream)", $descr="Database", $tags="Container,Database", $link="")
+        Container(Int2Fabric.StreamClienttopubsub, "Stream Client to pub/sub", $techn="Zenoh Router mode", $descr="Message Broker", $tags="Container", $link="")
+      }
+
+  }
+
+}
+
+Rel(EdgeComputingPlatform.HubDevice, Int2Fabric.StreamRouter, "1. publish messages", $techn="", $tags="Relationship", $link="")
+Rel(Int2Fabric.StreamClienttopubsub, Int2Fabric.StreamRouter, "2. subscribe", $techn="", $tags="Relationship", $link="")
+Rel(Int2Fabric.StreamClienttopubsub, Int2Fabric.StreamDatabase, "3. store", $techn="", $tags="Relationship", $link="")
+
+SHOW_LEGEND(true)
+@enduml

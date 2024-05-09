@@ -32,28 +32,29 @@ System_Boundary("EdgeComputingPlatform_boundary", "Edge Computing Platform", $ta
   Container(EdgeComputingPlatform.HubDevice, "Hub Device", $techn="", $descr="Edge Hub to integrate and orchastrate data from the sensor network.", $tags="Container", $link="")
 }
 
-System_Boundary("Int2DataFabricPlatform_boundary", "Int2 Data Fabric Platform", $tags="Software System") {
+System_Boundary("Int2Fabric_boundary", "Int2 Fabric", $tags="Software System") {
   AddBoundaryTag("Backend Services", $borderColor="#cccccc", $fontColor="#cccccc", $borderStyle="Dashed", $borderThickness="1")
   Boundary(group_3, "Backend Services", $tags="Backend Services") {
-      AddBoundaryTag("Backend Services/API Gateway Service", $borderColor="#cccccc", $fontColor="#cccccc", $borderStyle="Dashed", $borderThickness="1")
-      Boundary(group_4, "API Gateway Service", $tags="Backend Services/API Gateway Service") {
-        Container(Int2DataFabricPlatform.APIService, "API Service", $techn="", $descr="API Gateway Managed Service", $tags="Container", $link="")
+      AddBoundaryTag("Backend Services/API Service", $borderColor="#cccccc", $fontColor="#cccccc", $borderStyle="Dashed", $borderThickness="1")
+      Boundary(group_4, "API Service", $tags="Backend Services/API Service") {
+        Container(Int2Fabric.APIService, "API Service", $techn="", $descr="API Gateway Managed Service", $tags="Container", $link="")
       }
 
-      AddBoundaryTag("Backend Services/Data Pipeline Service", $borderColor="#cccccc", $fontColor="#cccccc", $borderStyle="Dashed", $borderThickness="1")
-      Boundary(group_5, "Data Pipeline Service", $tags="Backend Services/Data Pipeline Service") {
-        Container(Int2DataFabricPlatform.StreamPipelineBackend, "Stream Pipeline Backend", $techn="Container: Zenoh Backend S3", $descr="Subscribe data to store", $tags="Container", $link="")
-        ContainerDb(Int2DataFabricPlatform.StreamPipelineStorage, "Stream Pipeline Storage", $techn="AWS S3", $descr="Raw data storage", $tags="Container,Database", $link="")
+      AddBoundaryTag("Backend Services/DataPipelineService", $borderColor="#cccccc", $fontColor="#cccccc", $borderStyle="Dashed", $borderThickness="1")
+      Boundary(group_5, "DataPipelineService", $tags="Backend Services/DataPipelineService") {
+        Container(Int2Fabric.StreamAPI, "Stream API", $techn="Container: Zenoh Backend S3", $descr="Subscribe data to store", $tags="Container", $link="")
+        ContainerDb(Int2Fabric.StreamObjectStorage, "Stream Object Storage", $techn="AWS S3", $descr="Raw data storage", $tags="Container,Database", $link="")
+        ContainerDb(Int2Fabric.StreamDatabase, "Stream Database", $techn="InfluxDB(Amazon Timestream)", $descr="Database", $tags="Container,Database", $link="")
       }
 
   }
 
 }
 
-Rel(EdgeComputingPlatform.HubDevice, Int2DataFabricPlatform.StreamPipelineBackend, "1. Data Ingestion", $techn="", $tags="Relationship", $link="")
-Rel(Int2DataFabricPlatform.StreamPipelineBackend, Int2DataFabricPlatform.StreamPipelineStorage, "2. store", $techn="", $tags="Relationship", $link="")
-Rel(Bacumen.APIService, Int2DataFabricPlatform.APIService, "3. Request to access to specific dataource", $techn="", $tags="Relationship", $link="")
-Rel(Bacumen.VisualizationPanel, Int2DataFabricPlatform.StreamPipelineStorage, "4. connect", $techn="", $tags="Relationship", $link="")
+Rel(EdgeComputingPlatform.HubDevice, Int2Fabric.StreamAPI, "1. Data Ingestion", $techn="", $tags="Relationship", $link="")
+Rel(Int2Fabric.StreamAPI, Int2Fabric.StreamObjectStorage, "2. store", $techn="", $tags="Relationship", $link="")
+Rel(Bacumen.APIService, Int2Fabric.APIService, "3. Request to access to specific dataource", $techn="", $tags="Relationship", $link="")
+Rel(Bacumen.VisualizationPanel, Int2Fabric.StreamDatabase, "4. connect", $techn="", $tags="Relationship", $link="")
 
 SHOW_LEGEND(true)
 @enduml

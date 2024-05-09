@@ -28,14 +28,14 @@ Boundary(group_2, "EdgePlatform", $tags="EdgePlatform") {
 AddBoundaryTag("Int2Fabric", $borderColor="#cccccc", $fontColor="#cccccc", $borderStyle="Dashed", $borderThickness="1")
 Boundary(group_3, "Int2Fabric", $tags="Int2Fabric") {
   WithoutPropertyHeader()
-  AddProperty("Owner","Intellectus")
-  System(Int2DataFabricPlatform, "Int2 Data Fabric Platform", $descr="Autonomous Bigdata Platform has been powerd by Intellectu's Data Fabric Platform which contains the data virtualizations to manage data and the semantic search to discover and the data pipelines to make automated workflows.", $tags="Software System", $link="")
+  AddProperty("Owner","intellectus.software")
+  System(Int2Fabric, "Int2 Fabric", $descr="Autonomous Bigdata Platform has been powerd by Intellectu's Data Fabric Platform which contains the data virtualizations to manage data and the semantic search to discover and the data pipelines to make automated workflows.", $tags="Software System", $link="")
 }
 
 
-Rel(Bacumen, Int2DataFabricPlatform, "", $techn="", $tags="Relationship", $link="")
-Rel(EdgeComputingPlatform, Int2DataFabricPlatform, "", $techn="", $tags="Relationship", $link="")
-Rel(Int2DataFabricPlatform, Bacumen, "", $techn="", $tags="Relationship", $link="")
+Rel(Bacumen, Int2Fabric, "", $techn="", $tags="Relationship", $link="")
+Rel(EdgeComputingPlatform, Int2Fabric, "", $techn="", $tags="Relationship", $link="")
+Rel(Int2Fabric, Bacumen, "", $techn="", $tags="Relationship", $link="")
 
 SHOW_LEGEND(true)
 @enduml
